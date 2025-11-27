@@ -24,11 +24,19 @@ export default defineNuxtConfig({
         },
         {
           rel: 'stylesheet',
-          href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css',
+          href: 'https://use.typekit.net/vjq1lbx.css',
+        },
+      ],
+      script: [
+        {
+          src: 'https://kit.fontawesome.com/694332d875.js',
+          crossorigin: 'anonymous',
+          defer: true,
         },
       ],
     },
   },
+
   css: [
     '~/assets/css/global.css', // ✅ Keep global styles only
   ],

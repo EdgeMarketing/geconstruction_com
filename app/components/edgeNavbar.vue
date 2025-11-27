@@ -1,32 +1,52 @@
 <script setup>
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, onUnmounted, ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 
 const menuOpen = ref(false)
+const servicesOpenMobile = ref(false)
+const route = useRoute()
+
+const LINKS = [
+  { to: '/about', label: 'About' },
+  { to: '/our-work', label: 'Our Work', children: [
+    { to: '/portfolio/', label: 'All Projects' },
+    { to: '/portfolio/commercial', label: 'Commercial' },
+    { to: '/portfolio/residential', label: 'Residential' },
+    { to: '/portfolio/multi-family', label: 'Multi-Family' },
+  ] },
+  {
+    to: '/services',
+    label: 'Services',
+    children: [
+      { to: '/residential-construction', label: 'Residential' },
+      { to: '/commercial-construction', label: 'Commercial' },
+      { to: '/multi-family', label: 'Multi-Family' },
+      { to: '/crane-service', label: 'Crane Service' },
+      { to: '/roofing-service', label: 'Roofing Service' },
+      { to: '/drywall', label: 'Drywall' },
+      { to: '/excavation', label: 'Excavation' },
+    ],
+  },
+  { to: '/careers', label: 'Careers' },
+  { to: '/contact', label: 'Contact' },
+]
 
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value
-  if (menuOpen.value) {
-    document.body.classList.add('overflow-hidden') // Prevent scrolling when open
-  }
-  else {
-    document.body.classList.remove('overflow-hidden')
-  }
+  document.body.classList.toggle('overflow-hidden', menuOpen.value)
 }
 
-// Automatically close the menu when clicking a link
 const closeMenu = () => {
   menuOpen.value = false
+  servicesOpenMobile.value = false
   document.body.classList.remove('overflow-hidden')
 }
 
-// Ensure the menu closes when resizing back to desktop
 const handleResize = () => {
-  if (window.innerWidth >= 1024) {
+  if (window.innerWidth >= 1024)
     closeMenu()
-  }
 }
 
-// Listen for window resize events
 onMounted(() => {
   window.addEventListener('resize', handleResize)
 })
@@ -34,103 +54,177 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('resize', handleResize)
 })
+
+watch(
+  () => route.fullPath,
+  () => closeMenu(),
+)
 </script>
 
 <template>
-  <nav class="relative z-30 text-white">
-    <!-- Navigation Content (Top Half) -->
-    <div class="relative px-6 md:px-12 bg-dblue">
+  <nav class="relative z-50 text-white">
+    <!-- Top bar -->
+    <div class="relative px-6 bg-white md:px-12">
       <div class="container mx-auto flex items-center justify-between h-[128px]">
         <!-- Logo -->
         <NuxtLink to="/" class="text-xl font-bold">
-          <img src="/images/logo.png" alt="MT" class="w-full h-auto">
+          <img src="/images/logo.png" alt="MT" class="h-auto max-h-7 md:max-h-12">
         </NuxtLink>
 
-        <!-- Mobile Menu Button -->
-        <button class="md:hidden focus:outline-none" @click="toggleMenu">
-          <svg v-if="!menuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <!-- Mobile toggle -->
+        <button
+          class="md:hidden focus:outline-none text-brandBlue1"
+          aria-label="Toggle navigation"
+          :aria-expanded="menuOpen"
+          @click="toggleMenu"
+        >
+          <svg v-if="!menuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
-          <svg v-else class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg v-else class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
 
-        <!-- Desktop Menu -->
-        <ul class="hidden md:flex space-x-[30px] font-semibold tracking-widest uppercase">
-          <li>
-            <NuxtLink to="/" class="nav-item">
-              Home
+        <!-- Desktop menu -->
+        <ul class="hidden md:flex space-x-[78px] font-semibold tracking-widest uppercase">
+          <li
+            v-for="link in LINKS"
+            :key="link.label"
+            class="relative group"
+          >
+            <!-- Parent link -->
+            <NuxtLink
+              :to="link.to"
+              class="flex items-center gap-2 nav-item"
+            >
+              {{ link.label }}
+              <span v-if="link.children" class="text-xs">
+                ▾
+              </span>
             </NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/stuff" class="nav-item">
-              Stuff
-            </NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/projects" class="nav-item">
-              Projects
-            </NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/contact" class="nav-item">
-              Contact
-            </NuxtLink>
+
+            <!-- Desktop dropdown for Services -->
+            <div
+              v-if="link.children"
+              class="absolute left-0 z-50 invisible w-56 mt-0 transition bg-white shadow-lg opacity-0 text-brandBlk group-hover:opacity-100 group-hover:visible"
+            >
+              <ul class="py-3 text-sm tracking-normal normal-case">
+                <li
+                  v-for="child in link.children"
+                  :key="child.to"
+                >
+                  <NuxtLink
+                    :to="child.to"
+                    class="block px-5 py-2 hover:bg-gray-100"
+                  >
+                    {{ child.label }}
+                  </NuxtLink>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
     </div>
 
-    <!-- Mobile Slide-in Menu -->
+    <!-- Mobile slide-in -->
     <transition name="slide">
-      <div v-if="menuOpen" class="fixed inset-0 flex flex-col items-center justify-center px-20 py-6 text-center bg-dblue z-[9999] w-full h-full">
-        <!-- Close Button -->
-        <button class="absolute text-4xl top-6 right-6 text-lblue" @click="toggleMenu">
+      <div
+        v-if="menuOpen"
+        class="fixed inset-0 flex flex-col items-center justify-center px-20 py-6 text-center bg-dblue z-[9999] w-full h-full"
+      >
+        <button
+          class="absolute text-4xl top-6 right-6 text-lblue"
+          aria-label="Close menu"
+          @click="toggleMenu"
+        >
           &times;
         </button>
 
-        <!-- Mobile Logo -->
-        <a href="/"><img src="/images/logo.png" alt="Logo" class="mb-4 w-50"></a>
+        <NuxtLink to="/" @click.native="closeMenu">
+          <img src="/images/logo.png" alt="Logo" class="mb-4 w-50">
+        </NuxtLink>
 
-        <!-- Social Media Icons -->
+        <!-- Socials -->
         <div class="flex justify-center my-6 space-x-4">
-          <a href="#" class="flex items-center justify-center w-12 h-12 transition rounded-full bg-lblue text-dblue hover:bg-opacity-80">
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 transition rounded-full bg-lblue text-dblue hover:bg-opacity-80"
+            aria-label="Facebook"
+          >
             <i class="fab fa-facebook-f fa-lg" />
           </a>
-          <a href="#" class="flex items-center justify-center w-12 h-12 transition rounded-full bg-lblue text-dblue hover:bg-opacity-80">
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 transition rounded-full bg-lblue text-dblue hover:bg-opacity-80"
+            aria-label="Instagram"
+          >
             <i class="fab fa-instagram fa-lg" />
           </a>
-          <a href="#" class="flex items-center justify-center w-12 h-12 transition rounded-full bg-lblue text-dblue hover:bg-opacity-80">
-            <i class="fab fa-houzz fa-lg" /> <!-- Houzz or custom icon -->
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 transition rounded-full bg-lblue text-dblue hover:bg-opacity-80"
+            aria-label="Houzz"
+          >
+            <i class="fab fa-houzz fa-lg" />
           </a>
         </div>
 
-        <!-- Mobile Menu Items -->
-        <ul class="w-full">
-          <li class="border-t border-lblue">
-            <NuxtLink to="/" class="text-lg tracking-widest uppercase" @click="closeMenu">
-              Home
-            </NuxtLink>
-          </li>
-          <li class="border-t border-b border-lblue">
-            <NuxtLink to="/stuff" class="text-lg tracking-widest uppercase" @click="closeMenu">
-              Stuff
-            </NuxtLink>
-          </li>
-          <li class="border-t border-b border-lblue">
-            <NuxtLink to="/projects" class="text-lg tracking-widest uppercase" @click="closeMenu">
-              Projects
-            </NuxtLink>
-          </li>
-          <li class="border-t border-b border-lblue">
-            <NuxtLink to="/contact" class="text-lg tracking-widest uppercase" @click="closeMenu">
-              Contact
-            </NuxtLink>
+        <!-- Mobile menu items -->
+        <ul class="w-full text-left">
+          <li
+            v-for="(link, idx) in LINKS"
+            :key="link.label"
+            class="border-b border-lblue"
+            :class="idx === 0 ? 'border-t' : ''"
+          >
+            <!-- Parent with submenu (Services) -->
+            <template v-if="link.children">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full py-4 text-lg tracking-widest uppercase"
+                @click="servicesOpenMobile = !servicesOpenMobile"
+              >
+                <span>{{ link.label }}</span>
+                <span class="text-sm">
+                  {{ servicesOpenMobile ? '▴' : '▾' }}
+                </span>
+              </button>
+
+              <ul
+                v-if="servicesOpenMobile"
+                class="pb-2 pl-4 space-y-1 text-base tracking-normal uppercase"
+              >
+                <li
+                  v-for="child in link.children"
+                  :key="child.to"
+                >
+                  <NuxtLink
+                    :to="child.to"
+                    class="block py-2"
+                    @click="closeMenu"
+                  >
+                    {{ child.label }}
+                  </NuxtLink>
+                </li>
+              </ul>
+            </template>
+
+            <!-- Normal top-level items -->
+            <template v-else>
+              <NuxtLink
+                :to="link.to"
+                class="block py-4 text-lg tracking-widest uppercase"
+                @click="closeMenu"
+              >
+                {{ link.label }}
+              </NuxtLink>
+            </template>
           </li>
         </ul>
 
-        <!-- Call to Action Section -->
+        <!-- CTA -->
         <div class="mt-8 text-center">
           <h2 class="text-3xl font-bold tracking-widest uppercase text-lblue">
             Stuff
@@ -138,7 +232,11 @@ onUnmounted(() => {
           <p class="mt-2 text-white">
             More stuff here
           </p>
-          <NuxtLink to="/contact" class="inline-block px-10 py-4 mt-4 text-lg font-bold tracking-widest underline uppercase transition text-dblue bg-burntorange hover:bg-opacity-80" @click="closeMenu">
+          <NuxtLink
+            to="/contact"
+            class="inline-block px-10 py-4 mt-4 text-lg font-bold tracking-widest underline uppercase transition text-dblue bg-burntorange hover:bg-opacity-80"
+            @click="closeMenu"
+          >
             Contact Us
           </NuxtLink>
         </div>
@@ -147,41 +245,37 @@ onUnmounted(() => {
   </nav>
 </template>
 
- <style>
- /* Mobile slide-in transition */
- .slide-enter-active,
- .slide-leave-active {
-   transition: transform 0.3s ease-in-out;
- }
- .slide-enter-from,
- .slide-leave-to {
-   transform: translateX(100%);
- }
+<style>
+/* Mobile slide-in transition */
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.3s ease-in-out;
+}
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateX(100%);
+}
 
- /* Navigation Items with Triangle */
- .nav-item {
-   position: relative;
+/* Navigation Items with Triangle */
+.nav-item {
+  @apply text-brandGold font-sansAccent1;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
 
-   transition: color 0.3s ease-in-out;
- }
-
- /* Hover Effect */
- .nav-item:hover {
-   color: #A2A8AE; /* Accent color on hover */
- }
-
- .nav-item:hover::after {
-   transform: scale(1.3); /* Triangle expands */
-   background-color: white; /* Changes color slightly */
- }
-
- /* Active State */
- .nav-item.router-link-active {
-   color: white;
-   font-weight: bold;
- }
-
- .nav-item.router-link-active {
+/* Hover Effect */
+.nav-item:hover {
   color: #A2A8AE;
- }
- </style>
+}
+
+.nav-item:hover::after {
+  transform: scale(1.3);
+  background-color: white;
+}
+
+/* Active State */
+.nav-item.router-link-active {
+  font-weight: bold;
+  color: #A2A8AE;
+}
+</style>

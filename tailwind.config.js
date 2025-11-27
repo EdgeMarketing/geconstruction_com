@@ -9,17 +9,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        dblue: '#30464C', // Dark Blue
-        mblue: '#46616F', // Medium Blue
-        lgray: '#A2A8AE', // Light Gray
-        lblue: '#87B4B7', // Light Blue
-        burntorange: '#B65B33', // Burnt Orange
-        tan: '#BDA86A', // Tan
-        cream: '#D9D0C4', // Cream
+        brandGold: '#8E7B43',
+        brandSilver1: '#58595B',
+        brandSilver2: '#727477',
+        brandBlue1: '#242E37',
+        brandBlue2: '#5E6B79',
+        brandBlk: '#181D23',
       },
       fontFamily: {
-        sans: ['Overpass', 'sans-serif'],
-        serif: ['Rokkitt', 'serif'],
+        sans: ['loew-variable', 'sans-serif'],
+        sansAccent1: ['poster-gothic-cond-atf', 'serif'],
+        sansAccent2: ['lorimer-no-2-condensed', 'serif'],
       },
     },
   },
