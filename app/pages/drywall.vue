@@ -21,7 +21,7 @@
         <div class="m-auto text-4xl font-bold leading-10 text-brandGold">
           Ensuring the best appearance for your building’s interior
         </div>
-        <div class="max-w-5xl mx-auto my-12 leading-7 tracking-wide text-brandSilver1">
+        <div class="max-w-5xl mx-auto mt-3 mb-12 leading-7 tracking-wide text-brandSilver1">
           Drywall installation, also known as drywall or sheetrock hanging, is one of our specialty services because it's a crucial step in interior construction to create a smooth, paintable surface. We install drywall for both residential and commercial clients.
         </div>
       </div>

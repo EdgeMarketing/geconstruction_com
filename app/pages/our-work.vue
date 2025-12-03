@@ -50,7 +50,7 @@ onUnmounted(stop)
         <div class="max-w-3xl m-auto text-4xl font-bold leading-10 text-brandGold">
           Achieving the building goals of Montana home and business owners
         </div>
-        <div class="max-w-5xl mx-auto my-12 leading-7 tracking-wide text-brandSilver1">
+        <div class="max-w-5xl mx-auto mt-3 mb-12 leading-7 tracking-wide text-brandSilver1">
           <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
             <!-- Column 1 -->
             <p>

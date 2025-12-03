@@ -21,7 +21,7 @@
         <div class="max-w-3xl m-auto text-4xl font-bold leading-10 text-brandGold">
           Meeting the industry’s highest standards for every project
         </div>
-        <div class="max-w-5xl mx-auto my-12 leading-7 tracking-wide text-brandSilver1">
+        <div class="max-w-5xl mx-auto mt-3 mb-12 leading-7 tracking-wide text-brandSilver1">
           As one of the largest construction companies in the area, we have been competitive players in the commercial and industrial building industry here. Over our 40 years in business, we have adopted the latest innovations and technology, developed strong relationships with suppliers and subcontractors, and refined our estimating and bidding process to achieve the best value for our clients.
         </div>
         <button
@@ -47,7 +47,7 @@
       </p>
       <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         <!-- Cost-competitiveness -->
-        <div class="p-6 border border-white/15 bg-brandBlue1/25">
+        <div class="p-6 border border-white/15 bg-brandBlue1/45">
           <h3 class="text-sm font-semibold tracking-[0.2em] uppercase mb-3">
             Cost-competitiveness
           </h3>
@@ -57,7 +57,7 @@
         </div>
 
         <!-- Dedicated organization -->
-        <div class="p-6 border border-white/15 bg-brandBlue1/25">
+        <div class="p-6 border border-white/15 bg-brandBlue1/45">
           <h3 class="text-sm font-semibold tracking-[0.2em] uppercase mb-3">
             Dedicated organization
           </h3>
@@ -67,7 +67,7 @@
         </div>
 
         <!-- Breadth of Projects -->
-        <div class="p-6 border border-white/15 bg-brandBlue1/25">
+        <div class="p-6 border border-white/15 bg-brandBlue1/45">
           <h3 class="text-sm font-semibold tracking-[0.2em] uppercase mb-3">
             Breadth of Projects
           </h3>
@@ -77,7 +77,7 @@
         </div>
 
         <!-- Client-centered approach -->
-        <div class="p-6 border border-white/15 bg-brandBlue1/25">
+        <div class="p-6 border border-white/15 bg-brandBlue1/45">
           <h3 class="text-sm font-semibold tracking-[0.2em] uppercase mb-3">
             Client-centered approach
           </h3>
@@ -87,7 +87,7 @@
         </div>
 
         <!-- Professional leadership -->
-        <div class="p-6 border border-white/15 bg-brandBlue1/25">
+        <div class="p-6 border border-white/15 bg-brandBlue1/45">
           <h3 class="text-sm font-semibold tracking-[0.2em] uppercase mb-3">
             Professional leadership
           </h3>
@@ -97,7 +97,7 @@
         </div>
 
         <!-- Resourcefulness -->
-        <div class="p-6 border border-white/15 bg-brandBlue1/25">
+        <div class="p-6 border border-white/15 bg-brandBlue1/45">
           <h3 class="text-sm font-semibold tracking-[0.2em] uppercase mb-3">
             Resourcefulness
           </h3>

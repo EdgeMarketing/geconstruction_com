@@ -21,7 +21,7 @@
         <div class="text-4xl font-bold leading-10 text-brandGold">
           Unsurpassed Commercial and Residential Builder
         </div>
-        <div class="max-w-5xl mx-auto my-12 leading-7 tracking-wide text-brandSilver1">
+        <div class="max-w-5xl mx-auto mt-3 mb-12 leading-7 tracking-wide text-brandSilver1">
           <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
             <p>
               Founded in 1986 and owned by company president, Adam Senechal, since 2012,

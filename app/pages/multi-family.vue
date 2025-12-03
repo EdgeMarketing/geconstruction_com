@@ -21,7 +21,7 @@
         <div class="m-auto text-4xl font-bold leading-10 text-brandGold">
           Residential properties that radiate fine craftmanship and style
         </div>
-        <div class="max-w-5xl mx-auto my-12 leading-7 tracking-wide text-brandSilver1">
+        <div class="max-w-5xl mx-auto mt-3 mb-12 leading-7 tracking-wide text-brandSilver1">
           With our extensive experience in both residential and commercial construction, multi-family residences are a natural specialty for us. Our multi-family construction projects have encompassed various types, from small-scale duplexes and triplexes to mid-rise and larger apartment buildings, and even special-purpose multifamily properties targeting specific populations. These projects focus on energy efficiency and providing cost-effective housing solutions that maximize the return on investment for our clients.
         </div>
         <button

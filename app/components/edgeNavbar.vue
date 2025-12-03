@@ -3,17 +3,22 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
 const menuOpen = ref(false)
-const servicesOpenMobile = ref(false)
+// which mobile dropdown is open: e.g. 'Our Work', 'Services', or null
+const openMobileDropdown = ref(null)
 const route = useRoute()
 
 const LINKS = [
   { to: '/about', label: 'About' },
-  { to: '/our-work', label: 'Our Work', children: [
-    { to: '/portfolio/', label: 'All Projects' },
-    { to: '/portfolio/commercial', label: 'Commercial' },
-    { to: '/portfolio/residential', label: 'Residential' },
-    { to: '/portfolio/multi-family', label: 'Multi-Family' },
-  ] },
+  {
+    to: '/our-work',
+    label: 'Our Work',
+    children: [
+      { to: '/portfolio/', label: 'All Projects' },
+      { to: '/portfolio/commercial', label: 'Commercial' },
+      { to: '/portfolio/residential', label: 'Residential' },
+      { to: '/portfolio/multi-family', label: 'Multi-Family' },
+    ],
+  },
   {
     to: '/services',
     label: 'Services',
@@ -33,12 +38,15 @@ const LINKS = [
 
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value
+  if (!menuOpen.value)
+    openMobileDropdown.value = null
+
   document.body.classList.toggle('overflow-hidden', menuOpen.value)
 }
 
 const closeMenu = () => {
   menuOpen.value = false
-  servicesOpenMobile.value = false
+  openMobileDropdown.value = null
   document.body.classList.remove('overflow-hidden')
 }
 
@@ -132,7 +140,7 @@ watch(
     <transition name="slide">
       <div
         v-if="menuOpen"
-        class="fixed inset-0 flex flex-col items-center justify-center px-20 py-6 text-center bg-dblue z-[9999] w-full h-full"
+        class="fixed inset-0 flex flex-col items-center justify-center px-20 py-6 text-center bg-brandBlue1 z-[9999] w-full h-full"
       >
         <button
           class="absolute text-4xl top-6 right-6 text-lblue"
@@ -172,6 +180,7 @@ watch(
         </div>
 
         <!-- Mobile menu items -->
+        <!-- Mobile menu items -->
         <ul class="w-full text-left">
           <li
             v-for="(link, idx) in LINKS"
@@ -179,21 +188,24 @@ watch(
             class="border-b border-lblue"
             :class="idx === 0 ? 'border-t' : ''"
           >
-            <!-- Parent with submenu (Services) -->
+            <!-- Parent with submenu -->
             <template v-if="link.children">
               <button
                 type="button"
                 class="flex items-center justify-between w-full py-4 text-lg tracking-widest uppercase"
-                @click="servicesOpenMobile = !servicesOpenMobile"
+                @click="
+                  openMobileDropdown
+                    = openMobileDropdown === link.label ? null : link.label
+                "
               >
                 <span>{{ link.label }}</span>
                 <span class="text-sm">
-                  {{ servicesOpenMobile ? '▴' : '▾' }}
+                  {{ openMobileDropdown === link.label ? '▴' : '▾' }}
                 </span>
               </button>
 
               <ul
-                v-if="servicesOpenMobile"
+                v-if="openMobileDropdown === link.label"
                 class="pb-2 pl-4 space-y-1 text-base tracking-normal uppercase"
               >
                 <li
@@ -223,23 +235,6 @@ watch(
             </template>
           </li>
         </ul>
-
-        <!-- CTA -->
-        <div class="mt-8 text-center">
-          <h2 class="text-3xl font-bold tracking-widest uppercase text-lblue">
-            Stuff
-          </h2>
-          <p class="mt-2 text-white">
-            More stuff here
-          </p>
-          <NuxtLink
-            to="/contact"
-            class="inline-block px-10 py-4 mt-4 text-lg font-bold tracking-widest underline uppercase transition text-dblue bg-burntorange hover:bg-opacity-80"
-            @click="closeMenu"
-          >
-            Contact Us
-          </NuxtLink>
-        </div>
       </div>
     </transition>
   </nav>
