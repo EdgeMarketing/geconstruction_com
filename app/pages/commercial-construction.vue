@@ -5,15 +5,7 @@
     <Link rel="canonical" href="https://geconstruction.com/commercial-construction/" />
   </Head>
 
-  <section class="bg-fixed bg-cover page-hero" style="background-image: url(/images/title-1.jpg);">
-    <div class="container relative z-50 px-6 mx-auto ">
-      <div class="py-32 text-center">
-        <h1 class="text-4xl font-bold leading-10 lg:text-7xl text-brandBlue1 font-sansAccent2">
-          Commercial Construction
-        </h1>
-      </div>
-    </div>
-  </section>
+  <titleSection headline="Commercial Construction" />
 
   <section>
     <div class="container px-6 py-32 mx-auto">
@@ -34,7 +26,7 @@
     </div>
   </section>
 
-  <section class="relative py-32 text-white bg-fixed bg-cover" style="background-image: url(/images/commercial-Shodair.jpg);">
+  <section class="relative py-32 text-white bg-fixed bg-cover" style="background-image: url(/images/title-1.jpg);">
     <div class="absolute top-0 left-0 z-0 w-full h-full bg-brandBlk/40 mix-blend-multiply">
 &nbsp;
     </div>

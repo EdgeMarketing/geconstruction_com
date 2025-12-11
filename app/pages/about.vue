@@ -5,15 +5,7 @@
     <Link rel="canonical" href="https://geconstruction.com/about/" />
   </Head>
 
-  <section class="bg-fixed bg-cover page-hero" style="background-image: url(/images/title-1.jpg);">
-    <div class="container relative z-50 px-6 mx-auto ">
-      <div class="py-32 text-center">
-        <h1 class="text-4xl font-bold leading-10 lg:text-7xl text-brandBlue1 font-sansAccent2">
-          About Golden Eagle Construction
-        </h1>
-      </div>
-    </div>
-  </section>
+  <titleSection headline="About Golden Eagle Construction" />
 
   <section>
     <div class="container px-6 py-32 mx-auto">

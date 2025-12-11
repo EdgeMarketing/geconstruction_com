@@ -52,7 +52,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  devtools: { enabled: false },
+  devtools: { enabled: true },
   runtimeConfig: {
     // These values are only available on the server
     cfAccountId: process.env.NUXT_CF_ACCOUNT_ID,

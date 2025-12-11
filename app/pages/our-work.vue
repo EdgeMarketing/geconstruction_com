@@ -1,11 +1,17 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
+import imgRotator3 from '~/assets/projects/commercial/bill-roberts-golf-course/DJI_0200.jpg'
+import imgRotator2 from '~/assets/projects/commercial/town-pump-car-wash/GEC-Town-Pump-Car-Wash-02.jpg'
+import imgRotator4 from '~/assets/projects/multi-family/twin-creek-apartments/DSC_9070_1_2_3_4.jpg'
+import imgRotator5 from '~/assets/projects/residential/angeli/exteriors/MAP_7249.jpg'
+import imgRotator1 from '~/assets/projects/residential/barry/exterior/DEVL1774-7.jpg'
 
 const slides = [
-  { src: '/images/commercial-Munis.jpg', alt: 'Restaurant construction' },
-  { src: '/images/commercial-Shodair.jpg', alt: 'Shodair Childrens hospital' },
-  { src: '/images/residential-house1.jpg', alt: 'custom home construction' },
-  { src: '/images/residential-house2.jpg', alt: 'custom home construction' },
+  { src: imgRotator1, alt: '' },
+  { src: imgRotator2, alt: '' },
+  { src: imgRotator3, alt: '' },
+  { src: imgRotator4, alt: '' },
+  { src: imgRotator5, alt: '' },
 ]
 
 const idx = ref(0)
@@ -33,16 +39,7 @@ onUnmounted(stop)
     <Meta name="description" content="Golden Eagle Construction is a leading, high-quality construction firm in Montana, serving both residential and commercial clients since 1986. Our diverse portfolio and commitment to outstanding project delivery have earned us a strong reputation in the region. " />
     <Link rel="canonical" href="https://geconstruction.com/our-work/" />
   </Head>
-
-  <section class="bg-fixed bg-cover page-hero" style="background-image: url(/images/title-1.jpg);">
-    <div class="container relative z-50 px-6 mx-auto ">
-      <div class="py-32 text-center">
-        <h1 class="text-4xl font-bold leading-10 lg:text-7xl text-brandBlue1 font-sansAccent2">
-          Commercial & Residential Construction
-        </h1>
-      </div>
-    </div>
-  </section>
+  <titleSection headline="Commercial & Residential Construction" />
 
   <section>
     <div class="container px-6 py-32 mx-auto">

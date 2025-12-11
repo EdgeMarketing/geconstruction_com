@@ -5,15 +5,7 @@
     <Link rel="canonical" href="https://geconstruction.com/excavation/" />
   </Head>
   <div style="background-image: url('/images/texture.png')" class="bg-fixed bg-cover">
-    <section class="bg-fixed bg-cover page-hero" style="background-image: url(/images/title-1.jpg);">
-      <div class="container relative z-50 px-6 mx-auto ">
-        <div class="py-32 text-center">
-          <h1 class="text-4xl font-bold leading-10 lg:text-7xl text-brandBlue1 font-sansAccent2">
-            Excavation Services
-          </h1>
-        </div>
-      </div>
-    </section>
+    <titleSection headline="Excavation Services" />
 
     <section>
       <div class="container px-6 pt-32 pb-10 mx-auto">

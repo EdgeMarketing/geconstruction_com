@@ -1,5 +1,10 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
+import imgRotator3 from '~/assets/projects/commercial/bill-roberts-golf-course/DJI_0200.jpg'
+import imgRotator2 from '~/assets/projects/commercial/town-pump-car-wash/GEC-Town-Pump-Car-Wash-02.jpg'
+import imgRotator4 from '~/assets/projects/multi-family/twin-creek-apartments/DSC_9070_1_2_3_4.jpg'
+import imgRotator5 from '~/assets/projects/residential/angeli/exteriors/MAP_7249.jpg'
+import imgRotator1 from '~/assets/projects/residential/barry/exterior/DEVL1774-7.jpg'
 
 useHead({
   bodyAttrs: {
@@ -8,10 +13,11 @@ useHead({
 })
 
 const slides = [
-  { src: '/images/commercial-Munis.jpg', alt: 'Restaurant construction' },
-  { src: '/images/commercial-Shodair.jpg', alt: 'Shodair Childrens hospital' },
-  { src: '/images/residential-house1.jpg', alt: 'custom home construction' },
-  { src: '/images/residential-house2.jpg', alt: 'custom home construction' },
+  { src: imgRotator1, alt: '' },
+  { src: imgRotator2, alt: '' },
+  { src: imgRotator3, alt: '' },
+  { src: imgRotator4, alt: '' },
+  { src: imgRotator5, alt: '' },
 ]
 
 const idx = ref(0)

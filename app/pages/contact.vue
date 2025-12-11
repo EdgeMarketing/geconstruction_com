@@ -36,19 +36,7 @@ const validationSchema = toTypedSchema(
     class="bg-fixed bg-cover"
     style="background-image: url('/images/texture.png')"
   >
-    <!-- HERO -->
-    <section
-      class="bg-fixed bg-cover page-hero"
-      style="background-image: url(/images/title-1.jpg);"
-    >
-      <div class="container relative z-40 px-6 mx-auto">
-        <div class="py-32 text-center">
-          <h1 class="text-4xl font-bold leading-10 lg:text-7xl text-brandBlue1 font-sansAccent2">
-            Contact Us
-          </h1>
-        </div>
-      </div>
-    </section>
+    <titleSection headline="Contact Us" />
 
     <!-- MAIN CONTENT -->
     <section class="py-24 bg-white/95">

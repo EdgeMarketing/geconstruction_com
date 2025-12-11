@@ -5,15 +5,7 @@
     <Link rel="canonical" href="https://geconstruction.com/residential-construction/" />
   </Head>
 
-  <section class="bg-fixed bg-cover page-hero" style="background-image: url(/images/title-1.jpg);">
-    <div class="container relative z-50 px-6 mx-auto ">
-      <div class="py-32 text-center">
-        <h1 class="text-4xl font-bold leading-10 lg:text-7xl text-brandBlue1 font-sansAccent2">
-          Residential Construction
-        </h1>
-      </div>
-    </div>
-  </section>
+  <titleSection headline="Residential Construction" />
 
   <section>
     <div class="container px-6 pt-32 pb-10 mx-auto">
@@ -73,7 +65,7 @@
 
     <!-- Block 3 -->
     <div class="grid items-center grid-cols-1 lg:grid-cols-2">
-      <img src="/images/residential-house1.jpg" class="w-full h-[500px] object-cover">
+      <img src="/images/residential-3.jpg" class="w-full h-[500px] object-cover object-bottom">
 
       <div class="max-w-3xl px-6 py-10 pl-6 lg:pl-12">
         <h2 class="mb-6 text-4xl font-semibold text-brandBlue1">
