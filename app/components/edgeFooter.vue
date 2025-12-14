@@ -45,7 +45,7 @@ onMounted(() => {
                 <i class="fas fa-map-marker-alt" />
               </span>
               <span>
-                505 Shepherd Way<br>
+                505 Shephard Way<br>
                 Helena, Montana
               </span>
             </li>
@@ -56,12 +56,6 @@ onMounted(() => {
               <a href="tel:+14064497228" class="hover:underline">
                 406.449.7228
               </a>
-            </li>
-            <li class="flex items-center gap-3">
-              <span>
-                <i class="fa-solid fa-fax" />
-              </span>
-              406.449.2290
             </li>
           </ul>
 

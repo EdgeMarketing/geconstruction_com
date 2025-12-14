@@ -54,9 +54,9 @@
 
           <p>
             <strong>
-              Call us today at
-              <a href="tel:4064108864" class="underline text-brandGold">
-                406-410-8864
+
+              <a href="/contact" class="underline text-brandGold">
+                Contact us
               </a>
             </strong>
             for an estimate on your roofing installation or replacement project.

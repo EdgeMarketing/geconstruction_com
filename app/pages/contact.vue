@@ -140,24 +140,29 @@ const validationSchema = toTypedSchema(
                 <h4 class="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brandGold">
                   Helena, Montana
                 </h4>
-                <ul class="space-y-1 text-sm leading-relaxed text-brandSilver1">
-                  <li>
-                    <a
-                      href="https://www.google.com/maps/place/Golden+Eagle+Construction+Inc/@46.5975749,-112.0344807,13z/data=!4m19!1m13!4m12!1m4!2m2!1d-112.0217354!2d46.6044211!4e1!1m6!1m2!1s0x534355c852c76d97:0x4d889b1f7c661904!2sGolden+Eagle+Construction+Inc+Helena,+MT+59601!2m2!1d-111.9768918!2d46.5883497!3m4!1s0x534355c852c76d97:0x4d889b1f7c661904!8m2!3d46.5883497!4d-111.9768918"
-                      target="_blank"
-                      class="underline hover:text-brandGold"
-                    >
-                      505 Shepherd Way<br>
+                <ul class="space-y-1 text-sm leading-relaxed">
+                  <li class="flex items-start gap-3">
+                    <span class="mt-0.5">
+                      <i class="fas fa-map-marker-alt" />
+                    </span>
+                    <span>
+                      505 Shephard Way<br>
                       Helena, Montana
+                    </span>
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <span>
+                      <i class="fa-solid fa-phone-office" />
+                    </span>
+                    <a href="tel:+14064497228" class="hover:underline">
+                      406.449.7228
                     </a>
                   </li>
-                  <li>
-                    <a href="tel:14064497228" class="underline hover:text-brandGold">
-                      406.449.7228 (Office)
-                    </a>
-                  </li>
-                  <li>
-                    406.449.2290 (Fax)
+                  <li class="flex items-center gap-3">
+                    <span>
+                      <i class="fa-solid fa-fax" />
+                    </span>
+                    406.449.2290
                   </li>
                 </ul>
               </div>
@@ -169,20 +174,22 @@ const validationSchema = toTypedSchema(
                 <h4 class="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brandGold">
                   Bozeman, Montana
                 </h4>
-                <ul class="space-y-1 text-sm leading-relaxed text-brandSilver1">
-                  <li>
-                    <a
-                      href="https://www.google.com/maps/search/12+Pronghorn+Trail+b,+Bozeman,+MT+59718/@45.6852267,-111.1855697,17z/data=!3m1!4b1"
-                      target="_blank"
-                      class="underline hover:text-brandGold"
-                    >
+                <ul class="space-y-1 text-sm leading-relaxed">
+                  <li class="flex items-start gap-3">
+                    <span class="mt-0.5">
+                      <i class="fas fa-map-marker-alt" />
+                    </span>
+                    <span>
                       12 Pronghorn Lane Unit B<br>
                       Bozeman, Montana
-                    </a>
+                    </span>
                   </li>
-                  <li>
-                    <a href="tel:14065956447" class="underline hover:text-brandGold">
-                      406.595.6447 (Office)
+                  <li class="flex items-center gap-3">
+                    <span>
+                      <i class="fas fa-phone-office" />
+                    </span>
+                    <a href="tel:+14065956447" class="hover:underline">
+                      406.595.6447
                     </a>
                   </li>
                 </ul>
