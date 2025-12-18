@@ -29,7 +29,7 @@
               commercial divisions, Golden Eagle’s employees across our Helena and Bozeman
               offices and in the field are among the best in the construction industry.
               With expertise in project management, planning, design and other professional
-              services, they provide consistent communication and knowledgeable guidance.
+              services, we provide consistent communication and knowledgeable guidance.
               We have full-time tradespeople on staff, so we are less reliant on
               subcontractors and our clients are assured of consistent performance and
               superior results.

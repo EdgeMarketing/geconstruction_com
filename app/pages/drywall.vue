@@ -1,11 +1,11 @@
 <template>
   <Head>
-    <Title>Drywall / Sheetrock Hanging | Golden Eagle Construction | Montana</Title>
+    <Title>Drywall Hanging | Golden Eagle Construction | Montana</Title>
     <Meta name="description" content="Founded in 1986 and owned by company president, Adam Senechal, since 2012, Golden Eagle Construction provides high-quality commercial construction and residential construction services. " />
     <Link rel="canonical" href="https://geconstruction.com/drywall/" />
   </Head>
 
-  <titleSection headline="Drywall / Sheetrock Hanging" />
+  <titleSection headline="Drywall Hanging" />
 
   <section>
     <div class="container px-6 pt-32 pb-1 mx-auto">

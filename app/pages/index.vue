@@ -121,31 +121,34 @@ onUnmounted(stop)
           <div class="md:col-span-5 lg:col-span-4">
             <div class="grid gap-0">
               <!-- Tile 1 -->
-              <button
-                class="w-full text-left transition text-brandBlk px-14 h-60 bg-brandBlue2 hover:opacity-95"
+              <NuxtLink
+                to="/portfolio/residential"
+                class="flex items-center w-full text-left transition h-60 px-14 bg-brandBlue2 text-brandBlk hover:opacity-95"
               >
-                <span class="block text-2xl font-semibold tracking-widest uppercase font-sansAccent1">
+                <span class="text-2xl font-semibold tracking-widest uppercase font-sansAccent1">
                   Residential
                 </span>
-              </button>
+              </NuxtLink>
 
               <!-- Tile 2 -->
-              <button
-                class="w-full text-left transition text-brandBlk px-14 h-60 bg-brandGold hover:opacity-95"
+              <NuxtLink
+                to="/portfolio/commercial"
+                class="flex items-center w-full text-left transition h-60 px-14 bg-brandGold text-brandBlk hover:opacity-95"
               >
-                <span class="block text-2xl font-semibold tracking-widest uppercase font-sansAccent1">
+                <span class="text-2xl font-semibold tracking-widest uppercase font-sansAccent1">
                   Commercial
                 </span>
-              </button>
+              </NuxtLink>
 
               <!-- Tile 3 -->
-              <button
-                class="w-full text-left transition px-14 bg-brandBlk text-brandGold h-60 hover:opacity-95"
+              <NuxtLink
+                to="/services"
+                class="flex items-center w-full text-left transition h-60 px-14 bg-brandBlk text-brandGold hover:opacity-95"
               >
-                <span class="block text-2xl font-semibold tracking-widest uppercase font-sansAccent1">
+                <span class="text-2xl font-semibold tracking-widest uppercase font-sansAccent1">
                   Other Services
                 </span>
-              </button>
+              </NuxtLink>
             </div>
           </div>
 
@@ -186,11 +189,13 @@ onUnmounted(stop)
           <div class="max-w-5xl m-auto my-12 text-lg leading-8 tracking-wide text-brandSilver1">
             Construction projects can take weeks, months, or even years to complete. If you’re building your dream home or a new facility for your business, you want the experience to be more fun than stressful. We make sure you feel good about the process from start to finish by offering fair pricing, professional project management, high-quality craftsmanship, and consistent communication and service throughout. We have the top-notch office, supervisory and field staff to deliver this elevated experience and support your project all along the way, whether you’re selecting paint colors or fixtures, ordering flooring, or working through your budget.
           </div>
-          <button
+
+          <NuxtLink
+            to="/about"
             class="btnOutlineGold"
           >
             About Us
-          </button>
+          </NuxtLink>
         </div>
       </div>
     </section>

@@ -180,7 +180,7 @@ const validationSchema = toTypedSchema(
                       <i class="fas fa-map-marker-alt" />
                     </span>
                     <span>
-                      12 Pronghorn Lane Unit B<br>
+                      7585 Shedhorn Dr<br>
                       Bozeman, Montana
                     </span>
                   </li>
@@ -201,7 +201,7 @@ const validationSchema = toTypedSchema(
               <ul class="flex items-center gap-4">
                 <li>
                   <a
-                    href="https://www.facebook.com/pages/Golden-Eagle-Construction/479204082113682?fref=ts"
+                    href="https://www.facebook.com/Goldeneagleconstruction479204082113682?fref=ts"
                     target="_blank"
                     aria-label="Facebook"
                     class="text-xl text-brandBlue1 hover:text-brandGold"

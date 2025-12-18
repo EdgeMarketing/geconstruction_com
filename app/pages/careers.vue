@@ -24,7 +24,7 @@
           </p>
 
           <p class="mt-6">
-            Commercial projects include private, state and federal contracts in the Helena, Great Falls and
+            Commercial projects include private, state and federal contracts in the Helena, Bozeman and
             Billings regions. With over 60 employees and growing, we provide strong construction management
             on all projects and strive for client satisfaction.
           </p>

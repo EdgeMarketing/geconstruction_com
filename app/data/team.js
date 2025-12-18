@@ -58,16 +58,6 @@ export default {
     bio: ``,
   },
 
-  'jaclyn-liebscher': {
-    name: 'Jaclyn Liebscher',
-    slug: 'jaclyn-liebscher',
-    order: '7',
-    image: '/images/team/jaclyn-liebscher.jpg',
-    title: 'Project Manager',
-    team: 'leadership',
-    bio: ``,
-  },
-
   'lance-vickory': {
     name: 'Lance Vickory',
     slug: 'lance-vickory',

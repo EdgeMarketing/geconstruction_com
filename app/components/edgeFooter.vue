@@ -69,7 +69,7 @@ onMounted(() => {
                 <i class="fas fa-map-marker-alt" />
               </span>
               <span>
-                12 Pronghorn Lane Unit B<br>
+                7585 Shedhorn Dr<br>
                 Bozeman, Montana
               </span>
             </li>
@@ -95,7 +95,7 @@ onMounted(() => {
           </p>
 
           <div class="flex items-center gap-4 mt-6">
-            <a href="https://www.facebook.com/pages/Golden-Eagle-Construction/" target="_blank" rel="noopener" class="text-brandSilver2 hover:text-brandGold">
+            <a href="https://www.facebook.com/Goldeneagleconstruction" target="_blank" rel="noopener" class="text-brandSilver2 hover:text-brandGold">
               <i class="fab fa-facebook-f fa-lg" />
             </a>
             <a href="https://www.linkedin.com/company/golden-eagle-construction-inc-" target="_blank" rel="noopener" class="text-brandSilver2 hover:text-brandGold">

@@ -17,12 +17,13 @@
           Your home is more than just a place to live. It’s where family ties grow stronger and friends are always welcome.<br>
           Golden Eagle Construction has earned a reputation for creating truly unique custom homes that showcase our clients' individual styles in every detail. With over 40 years of experience, we have built a diverse portfolio of custom homes, from contemporary to rustic, including the latest innovations in energy efficiency, technology, and security.
         </div>
-        <button
+
+        <NuxtLink
+          to="/portfolio/residential"
           class="btnOutlineGold"
-          href="/portfolio/residential"
         >
           View Residential Projects
-        </button>
+        </NuxtLink>
       </div>
     </div>
   </section>

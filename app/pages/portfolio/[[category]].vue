@@ -325,7 +325,7 @@ const scrollThumbs = (direction) => {
             class="object-cover w-full transition-transform duration-300 h-80 group-hover:scale-105"
           >
 
-          <div class="absolute bottom-0 left-0 right-0 px-4 py-3 bg-gradient-to-t from-black/70 to-transparent">
+          <div class="absolute bottom-0 left-0 right-0 px-4 py-3 capitalize bg-gradient-to-t from-black/70 to-transparent">
             <p class="text-sm font-semibold text-white">
               {{ group.project.replace(/-/g, ' ') }}
             </p>

@@ -14,14 +14,14 @@
           Meeting the industry’s highest standards for every project
         </div>
         <div class="max-w-5xl mx-auto mt-3 mb-12 leading-7 tracking-wide text-brandSilver1">
-          As one of the largest construction companies in the area, we have been competitive players in the commercial and industrial building industry here. Over our 40 years in business, we have adopted the latest innovations and technology, developed strong relationships with suppliers and subcontractors, and refined our estimating and bidding process to achieve the best value for our clients.
+          As one of the largest construction companies in the area, we have been competitive players in the commercial building industry across Montana. Over our 40 years in business, we have adopted the latest innovations and technology, developed strong relationships with suppliers and subcontractors, and refined our estimating and bidding process to achieve the best value for our clients.
         </div>
-        <button
+        <NuxtLink
+          to="/portfolio/commercial"
           class="btnOutlineGold"
-          href="/portfolio/commercial"
         >
           View Commercial Projects
-        </button>
+        </NuxtLink>
       </div>
     </div>
   </section>
@@ -54,7 +54,7 @@
             Dedicated organization
           </h3>
           <p class="text-sm leading-relaxed text-white">
-            The backbone of our company is our tight infrastructure of seasoned leadership, experienced project managers, supportive office staff, and on-staff tradespeople. They represent our clients in negotiations with architects, suppliers, and subcontractors to deliver the best value for your investment.
+            The backbone of our company is our tight infrastructure of seasoned leadership, experienced project managers, supportive office staff, and on-site tradespeople. They represent our clients in negotiations with architects, suppliers, and subcontractors to deliver the best value for your investment.
           </p>
         </div>
 
