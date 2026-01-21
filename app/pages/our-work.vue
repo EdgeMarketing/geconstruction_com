@@ -44,7 +44,7 @@ onUnmounted(stop)
   <section>
     <div class="container px-6 py-32 mx-auto">
       <div class="text-center">
-        <div class="max-w-3xl m-auto text-4xl font-bold leading-10 text-brandGold">
+        <div class="max-w-3xl m-auto text-4xl font-bold leading-10 text-brandGold capitalize capitalize">
           Achieving the building goals of Montana home and business owners
         </div>
         <div class="max-w-5xl mx-auto mt-3 mb-12 leading-7 tracking-wide text-brandSilver1">
@@ -136,7 +136,7 @@ onUnmounted(stop)
       <div class="grid items-stretch grid-cols-1 md:grid-cols-12">
         <!-- Left column (inside container) -->
         <div class="py-16 pr-16 md:col-span-5 lg:col-span-4">
-          <h3 class="mb-6 text-2xl font-bold text-white">
+          <h3 class="mb-6 text-2xl font-bold text-white capitalize">
             Our key strengths include:
           </h3>
 

@@ -131,7 +131,7 @@ const validationSchema = toTypedSchema(
           <!-- INFO COLUMN (1/3) -->
           <aside class="space-y-8">
             <div>
-              <h3 class="mb-4 text-lg font-semibold text-brandBlue1">
+              <h3 class="mb-4 text-lg font-semibold capitalize text-brandBlue1">
                 Contact Info
               </h3>
 
@@ -226,7 +226,7 @@ const validationSchema = toTypedSchema(
 
             <!-- Join our team -->
             <div>
-              <h3 class="mb-3 text-lg font-semibold text-brandBlue1">
+              <h3 class="mb-3 text-lg font-semibold capitalize text-brandBlue1">
                 Join Our Team
               </h3>
               <p class="text-sm leading-6 text-brandSilver1">

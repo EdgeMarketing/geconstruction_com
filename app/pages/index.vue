@@ -65,7 +65,7 @@ onUnmounted(stop)
       <div class="relative pt-48 pb-12 text-2xl font-light leading-relaxed text-white">
         <div class="grid grid-cols-1 gap-28 md:grid-cols-12">
           <div class="md:col-span-5">
-            <p class="text-3xl font-bold leading-[48px] pr-5">
+            <p class="text-3xl font-bold leading-[48px] pr-5 capitalize">
               Your construction partner delivering high-quality residential and commercial projects
             </p>
           </div>
@@ -183,7 +183,7 @@ onUnmounted(stop)
     <section>
       <div class="container px-6 py-32 mx-auto">
         <div class="text-center">
-          <div class="text-4xl font-bold leading-10 text-brandGold">
+          <div class="text-4xl font-bold leading-10 text-brandGold capitalize">
             The client experience you expect
           </div>
           <div class="max-w-5xl m-auto my-12 text-lg leading-8 tracking-wide text-brandSilver1">
@@ -205,7 +205,7 @@ onUnmounted(stop)
         <img src="/images/fireplace.jpg">
       </div>
       <div class="col-span-12 px-6 text-left md:px-24 md:col-span-4 py-28">
-        <h3 class="mb-6 text-2xl font-bold text-white">
+        <h3 class="mb-6 text-2xl font-bold text-white capitalize">
           Montana builders since 1986
         </h3>
         <div class="text-white">

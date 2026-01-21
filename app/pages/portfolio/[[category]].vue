@@ -413,7 +413,7 @@ const scrollThumbs = (direction) => {
 
           <!-- Simple caption -->
           <div class="mt-4 text-center text-white">
-            <div class="text-lg font-semibold">
+            <div class="text-lg font-semibold capitalize">
               {{ activeImage.project.replace(/-/g, ' ') }}
             </div>
             <div class="text-xs uppercase tracking-[0.2em] text-white/70">

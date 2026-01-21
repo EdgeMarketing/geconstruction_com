@@ -10,7 +10,7 @@
   <section>
     <div class="container px-6 pt-32 pb-10 mx-auto">
       <div class="text-center">
-        <div class="m-auto text-4xl font-bold leading-10 text-brandGold">
+        <div class="m-auto text-4xl font-bold leading-10 text-brandGold capitalize capitalize">
           Residential and commercial roofing are among our core specialties
         </div>
       </div>
@@ -40,7 +40,7 @@
         </div>
 
         <div class="max-w-4xl px-6 mx-auto space-y-6 leading-7 lg:ml-12 lg:mr-0 text-brandSilver1">
-          <h2 class="mb-6 text-4xl font-semibold text-brandBlue1">
+          <h2 class="mb-6 text-4xl font-semibold text-brandBlue1 capitalize">
             Roofing Services
           </h2>
 

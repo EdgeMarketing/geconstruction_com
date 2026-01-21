@@ -10,7 +10,7 @@
   <section>
     <div class="container px-6 pt-32 pb-10 mx-auto">
       <div class="text-center">
-        <div class="m-auto text-4xl font-bold leading-10 text-brandGold">
+        <div class="m-auto text-4xl font-bold leading-10 text-brandGold capitalize capitalize">
           Exceptional crane services for all your hoisting and rigging needs
         </div>
         <div class="max-w-4xl mx-auto my-12 leading-7 tracking-wide text-brandSilver1">
