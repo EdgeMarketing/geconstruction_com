@@ -1,10 +1,10 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
 import imgRotator3 from '~/assets/projects/commercial/bill-roberts-golf-course/DJI_0200.jpg'
-import imgRotator2 from '~/assets/projects/commercial/town-pump-car-wash/GEC-Town-Pump-Car-Wash-02.jpg'
+import imgRotator1 from '~/assets/projects/commercial/montana-land-reliance/MRL-01-12in.jpg'
+import imgRotator5 from '~/assets/projects/commercial/town-pump-car-wash/GEC-Town-Pump-Car-Wash-02.jpg'
 import imgRotator4 from '~/assets/projects/multi-family/twin-creek-apartments/DSC_9070_1_2_3_4.jpg'
-import imgRotator5 from '~/assets/projects/residential/angeli/exteriors/MAP_7249.jpg'
-import imgRotator1 from '~/assets/projects/residential/barry/exterior/DEVL1774-7.jpg'
+import imgRotator2 from '~/assets/projects/residential/barry/exterior/DEVL1774-7.jpg'
 
 useHead({
   bodyAttrs: {
@@ -183,7 +183,7 @@ onUnmounted(stop)
     <section>
       <div class="container px-6 py-32 mx-auto">
         <div class="text-center">
-          <div class="text-4xl font-bold leading-10 text-brandGold capitalize">
+          <div class="text-4xl font-bold leading-10 capitalize text-brandGold">
             The client experience you expect
           </div>
           <div class="max-w-5xl m-auto my-12 text-lg leading-8 tracking-wide text-brandSilver1">
