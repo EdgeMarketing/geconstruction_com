@@ -21,18 +21,18 @@
     </section>
 
     <section class="relative pb-32">
-      <div class="grid items-stretch lg:grid-cols-3">
-        <!-- Left column: match height of right side -->
-        <div class="hidden h-full lg:block">
+      <div class="grid lg:grid-cols-3 lg:items-stretch">
+        <!-- Left column: height is controlled by the grid row, not the image -->
+        <div class="relative hidden min-h-0 overflow-hidden lg:block">
           <img
             src="/images/excavation.jpg"
             alt="Excavation"
-            class="object-cover w-full h-full"
+            class="absolute inset-0 object-cover w-full h-full"
           >
         </div>
 
-        <!-- Right side: cards -->
-        <div class="col-span-3 lg:col-span-2">
+        <!-- Right side -->
+        <div class="min-h-0 col-span-3 lg:col-span-2">
           <div class="max-w-6xl px-6">
             <!-- Mobile image above cards -->
             <div class="mb-8 lg:hidden">
