@@ -10,7 +10,7 @@
     <section>
       <div class="container px-6 pt-32 pb-10 mx-auto">
         <div class="text-center">
-          <div class="m-auto text-4xl font-bold leading-10 text-brandGold capitalize capitalize">
+          <div class="m-auto text-4xl font-bold leading-10 capitalize text-brandGold">
             When digging, clearing or grading are needed
           </div>
           <div class="max-w-4xl mx-auto my-12 leading-7 tracking-wide text-brandSilver1">
@@ -21,23 +21,23 @@
     </section>
 
     <section class="relative pb-32">
-      <div class="grid lg:grid-cols-3">
-        <!-- Left column: full-height photo, flush left on lg -->
-        <div class="hidden lg:block">
+      <div class="grid items-stretch lg:grid-cols-3">
+        <!-- Left column: match height of right side -->
+        <div class="hidden h-full lg:block">
           <img
-            src="/images/commercial-Shodair.jpg"
+            src="/images/excavation.jpg"
             alt="Excavation"
             class="object-cover w-full h-full"
           >
         </div>
 
-        <!-- Right side: cards in 2 columns, inside normal page width -->
+        <!-- Right side: cards -->
         <div class="col-span-3 lg:col-span-2">
           <div class="max-w-6xl px-6">
-            <!-- Optional mobile image above cards -->
+            <!-- Mobile image above cards -->
             <div class="mb-8 lg:hidden">
               <img
-                src="/images/commercial-Shodair.jpg"
+                src="/images/excavation.jpg"
                 alt="Excavation"
                 class="object-cover w-full h-64"
               >
