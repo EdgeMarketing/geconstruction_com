@@ -10,7 +10,7 @@
   <section>
     <div class="container px-6 py-32 mx-auto">
       <div class="text-center">
-        <div class="text-4xl font-bold leading-10 text-brandGold capitalize">
+        <div class="text-4xl font-bold leading-10 capitalize text-brandGold">
           Unsurpassed Commercial and Residential Builder
         </div>
         <div class="max-w-5xl mx-auto mt-3 mb-12 leading-7 tracking-wide text-brandSilver1">
@@ -49,20 +49,11 @@
     <div class="container px-6 py-20 mx-auto">
       <div class="text-center">
         <div class="mb-12 text-4xl font-bold leading-10 text-brandBlue1">
-          Meet Our Leadership Team
+          Meet Our  Team
         </div>
       </div>
 
-      <teamCard team="leadership" />
-    </div>
-    <div class="container px-6 py-20 mx-auto">
-      <div class="text-center">
-        <div class="mb-12 text-4xl font-bold leading-10 text-brandBlue1">
-          Meet Our Office Team
-        </div>
-      </div>
-
-      <teamCard team="office" />
+      <teamCard />
     </div>
   </section>
 </template>

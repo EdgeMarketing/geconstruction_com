@@ -35,13 +35,27 @@ const staffList = computed(() => {
     return found ? [found] : []
   }
 
-  // 2. If a team is provided, filter by team
+  // 2. If a specific team is provided, filter normally
   if (props.team) {
     return allStaff.value.filter(person => person.team === props.team)
   }
 
-  // 3. Default: return everything
-  return allStaff.value
+  // 3. Otherwise return all, ordered
+  const priority = {
+    leadership: 1,
+    office: 3,
+  }
+
+  return [...allStaff.value].sort((a, b) => {
+    const aRank = priority[a.team] || 2
+    const bRank = priority[b.team] || 2
+
+    if (aRank !== bRank)
+      return aRank - bRank
+
+    // Optional: secondary alphabetical sort within same group
+    return (a.name || '').localeCompare(b.name || '')
+  })
 })
 </script>
 
@@ -71,7 +85,7 @@ const staffList = computed(() => {
       <!-- Overlapping info card -->
       <div class="relative pb-6">
         <div
-          class="absolute left-0 flex items-center justify-between px-6 py-4 bg-white shadow-md right-12 -top-8"
+          class="absolute left-0 flex items-center justify-between gap-6 px-6 py-4 bg-white shadow-md right-12 -top-8"
         >
           <div>
             <p class="text-xl font-semibold text-brandBlk">
@@ -84,6 +98,15 @@ const staffList = computed(() => {
               {{ person.title }}
             </p>
           </div>
+
+          <!-- Only show if they actually have a bio -->
+          <span
+            v-if="person.bio && person.bio.trim().length"
+            class="transition-transform duration-200 text-brandGold/50 group-hover:translate-x-1"
+            aria-hidden="true"
+          >
+            about ›
+          </span>
         </div>
       </div>
     </NuxtLink>
