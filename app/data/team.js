@@ -74,7 +74,7 @@ export default {
     slug: 'jeff-vachal',
     order: '8',
     image: '/images/team/placeholder.jpg',
-    title: 'Project Manager',
+    title: 'Business Development',
     team: 'leadership',
     bio: `Jeff has more than 45 years in the construction industry, including the last 20 years focused on high-end custom homes. He has been with Golden Eagle for three years and supports residential business development and project management. Jeff coaches high school girls’ basketball, and he and his wife Julie are raising their 14-year-old granddaughter, Oli, along with their 5-year-old goldendoodle, Nico. He’s active in his local church and involved in his granddaughter’s high school community.`,
   },

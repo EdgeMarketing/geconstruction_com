@@ -10,7 +10,7 @@
   <section>
     <div class="container px-6 pt-32 pb-10 mx-auto">
       <div class="text-center">
-        <div class="m-auto text-4xl font-bold leading-10 text-brandGold capitalize capitalize">
+        <div class="m-auto text-4xl font-bold leading-10 capitalize text-brandGold">
           Exceptional crane services for all your hoisting and rigging needs
         </div>
         <div class="max-w-4xl mx-auto my-12 leading-7 tracking-wide text-brandSilver1">
@@ -57,31 +57,25 @@
           <!-- Card 1 -->
           <div class="p-6 text-center border border-white/15 bg-brandBlue1/5">
             <img
-              src="/images/terex2392.jpg"
+              src="/images/crane2.jpg"
               alt="Terex 2392 Crane"
-              class="object-cover w-full h-64 mb-6"
+              class="w-full mb-6 "
             >
             <h4 class="mb-1 text-xl font-semibold text-brandBlk">
               Terex 2392
             </h4>
-            <p class="font-bold text-brandBlue1">
-              $180/hour
-            </p>
           </div>
 
           <!-- Card 2 -->
           <div class="p-6 text-center border border-white/15 bg-brandBlue1/5">
             <img
-              src="/images/groveRT600.jpg"
+              src="/images/crane.jpg"
               alt="Grove RT 600 50-Ton Crane"
-              class="object-cover w-full h-64 mb-6"
+              class="w-full mb-6"
             >
             <h4 class="mb-1 text-xl font-semibold text-brandBlk">
               Grove RT 600 50-Ton
             </h4>
-            <p class="font-bold text-brandBlue1">
-              $230/hour
-            </p>
           </div>
         </div>
       </div>

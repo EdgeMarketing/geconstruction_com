@@ -143,10 +143,10 @@ onMounted(() => {
 
           <!-- Right legal links -->
           <div class="flex items-center gap-4">
-            <NuxtLink to="/terms" class="hover:underline">
+            <!-- <NuxtLink to="/terms" class="hover:underline">
               Privacy Policy
             </NuxtLink>
-            <span class="w-px h-4 bg-gray-300" />
+            <span class="w-px h-4 bg-gray-300" /> -->
             <NuxtLink to="https://edgemarketingdesign.com" class="hover:underline">
               Website by Edge Marketing
             </NuxtLink>
