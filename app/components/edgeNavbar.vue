@@ -27,7 +27,6 @@ const LINKS = [
       { to: '/commercial-construction', label: 'Commercial' },
       { to: '/multi-family', label: 'Multi-Family' },
       { to: '/crane-service', label: 'Crane Service' },
-      { to: '/roofing-service', label: 'Roofing Service' },
       { to: '/drywall', label: 'Drywall' },
       { to: '/excavation', label: 'Excavation' },
     ],

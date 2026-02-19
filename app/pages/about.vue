@@ -16,7 +16,7 @@
         <div class="max-w-5xl mx-auto mt-3 mb-12 leading-7 tracking-wide text-brandSilver1">
           <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
             <p>
-              Founded in 1986 and owned by company president, Adam Senechal, since 2012,
+              Founded in 1986,
               Golden Eagle Construction provides high-quality commercial construction and
               residential construction services. Since Adam took the helm, we have grown
               exponentially, driven by a family-oriented culture focused on building
@@ -49,11 +49,23 @@
     <div class="container px-6 py-20 mx-auto">
       <div class="text-center">
         <div class="mb-12 text-4xl font-bold leading-10 text-brandBlue1">
-          Meet Our  Team
+          Executive Leadership
         </div>
       </div>
 
-      <teamCard />
+      <teamCard team="leadership" />
+    </div>
+  </section>
+
+  <section class="bg-brandSilver2/10">
+    <div class="container px-6 py-20 mx-auto">
+      <div class="text-center">
+        <div class="mb-12 text-4xl font-bold leading-10 text-brandBlue1">
+          Meet Our Team
+        </div>
+      </div>
+
+      <teamCard team="office" />
     </div>
   </section>
 </template>

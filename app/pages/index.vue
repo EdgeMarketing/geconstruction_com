@@ -4,7 +4,7 @@ import imgRotator3 from '~/assets/projects/commercial/bill-roberts-golf-course/D
 import imgRotator1 from '~/assets/projects/commercial/montana-land-reliance/MRL-01-12in.jpg'
 import imgRotator5 from '~/assets/projects/commercial/town-pump-car-wash/GEC-Town-Pump-Car-Wash-02.jpg'
 import imgRotator4 from '~/assets/projects/multi-family/twin-creek-apartments/DSC_9070_1_2_3_4.jpg'
-import imgRotator2 from '~/assets/projects/residential/barry/exterior/DEVL1774-7.jpg'
+import imgRotator2 from '~/assets/projects/residential/mountain-craftsman/exterior/DEVL1774-7.jpg'
 
 useHead({
   bodyAttrs: {

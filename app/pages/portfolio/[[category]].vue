@@ -139,15 +139,20 @@ const projectGroups = computed(() => {
         category: img.category,
         project: img.project,
         images: [],
-        cover: img, // default cover
+        cover: null,
       })
     }
 
     const group = map.get(key)
     group.images.push(img)
 
-    // Prefer exteriors as cover if available
-    if (img.room === 'exteriors' || !group.cover) {
+    // If this file is main.jpg, use it as cover
+    if (img.filename?.toLowerCase() === 'main.jpg') {
+      group.cover = img
+    }
+
+    // Fallback: if no cover yet, use first image
+    if (!group.cover) {
       group.cover = img
     }
   }

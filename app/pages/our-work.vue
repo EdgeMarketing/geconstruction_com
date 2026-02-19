@@ -3,8 +3,8 @@ import { onMounted, onUnmounted, ref } from 'vue'
 import imgRotator3 from '~/assets/projects/commercial/bill-roberts-golf-course/DJI_0200.jpg'
 import imgRotator2 from '~/assets/projects/commercial/town-pump-car-wash/GEC-Town-Pump-Car-Wash-02.jpg'
 import imgRotator4 from '~/assets/projects/multi-family/twin-creek-apartments/DSC_9070_1_2_3_4.jpg'
-import imgRotator5 from '~/assets/projects/residential/angeli/exteriors/MAP_7249.jpg'
-import imgRotator1 from '~/assets/projects/residential/barry/exterior/DEVL1774-7.jpg'
+import imgRotator5 from '~/assets/projects/residential/lake-retreat/exteriors/MAP_7249.jpg'
+import imgRotator1 from '~/assets/projects/residential/mountain-craftsman/exterior/DEVL1774-7.jpg'
 
 const slides = [
   { src: imgRotator1, alt: '' },
@@ -44,7 +44,7 @@ onUnmounted(stop)
   <section>
     <div class="container px-6 py-32 mx-auto">
       <div class="text-center">
-        <div class="max-w-3xl m-auto text-4xl font-bold leading-10 text-brandGold capitalize capitalize">
+        <div class="max-w-3xl m-auto text-4xl font-bold leading-10 capitalize text-brandGold">
           Achieving the building goals of Montana home and business owners
         </div>
         <div class="max-w-5xl mx-auto mt-3 mb-12 leading-7 tracking-wide text-brandSilver1">

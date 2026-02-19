@@ -35,12 +35,28 @@ const staffList = computed(() => {
     return found ? [found] : []
   }
 
-  // 2. If a specific team is provided, filter normally
+  // 2. If a specific team is provided
   if (props.team) {
-    return allStaff.value.filter(person => person.team === props.team)
+    const filtered = allStaff.value.filter(person => person.team === props.team)
+
+    if (props.team === 'leadership') {
+      return [...filtered].sort((a, b) => {
+        const aOrder = Number(a.order) || 999
+        const bOrder = Number(b.order) || 999
+        return aOrder - bOrder
+      })
+    }
+
+    if (props.team === 'office') {
+      return [...filtered].sort((a, b) =>
+        (a.name || '').localeCompare(b.name || ''),
+      )
+    }
+
+    return filtered
   }
 
-  // 3. Otherwise return all, ordered
+  // 3. No team prop → global ordering
   const priority = {
     leadership: 1,
     office: 3,
@@ -53,7 +69,19 @@ const staffList = computed(() => {
     if (aRank !== bRank)
       return aRank - bRank
 
-    // Optional: secondary alphabetical sort within same group
+    // Leadership sorted by order
+    if (a.team === 'leadership') {
+      const aOrder = Number(a.order) || 999
+      const bOrder = Number(b.order) || 999
+      return aOrder - bOrder
+    }
+
+    // Office sorted alphabetically
+    if (a.team === 'office') {
+      return (a.name || '').localeCompare(b.name || '')
+    }
+
+    // Everyone else alphabetical
     return (a.name || '').localeCompare(b.name || '')
   })
 })

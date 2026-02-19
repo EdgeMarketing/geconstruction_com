@@ -167,7 +167,7 @@
         </NuxtLink>
 
         <!-- Roofing -->
-        <NuxtLink
+        <!-- <NuxtLink
           to="/roofing-service"
           class="relative block group"
         >
@@ -191,7 +191,7 @@
               </p>
             </div>
           </div>
-        </NuxtLink>
+        </NuxtLink> -->
 
         <!-- Crane -->
         <NuxtLink

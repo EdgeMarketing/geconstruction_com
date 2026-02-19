@@ -12,7 +12,7 @@ export default {
   'kurt-olsen': {
     name: 'Kurt Olsen',
     slug: 'kurt-olsen',
-    order: '2',
+    order: '4',
     image: '/images/team/placeholder.jpg',
     title: 'Vice President, Residential',
     team: 'leadership',
@@ -32,17 +32,17 @@ export default {
   'bryson-buska': {
     name: 'Bryson Buska',
     slug: 'bryson-buska',
-    order: '4',
+    order: '5',
     image: '/images/team/bryson-buska.jpg',
     title: 'Vice President, Bozeman',
     team: 'leadership',
-    bio: `Bryson’s early career included managing ground-up and new construction of medical facilities, hospitals, outpatient clinics, and treatment facilities in Eastern Montana and Southwestern Washington. Since joining Golden Eagle in 2019, he has focused primarily on multi-family work and commercial remodel projects, and now serves as Vice President of the Bozeman office after relocating to the Three Forks area. Bryson enjoys golfing, camping, and spending summers at his family’s cabin, and his fall calendar is usually filled with hunting and Bobcat football. A fun detail: both of his kids have palindrome birthday dates, which helps, at least a little, with remembering birthdays.`,
+    bio: `After graduating from Montana State University with a degree in Construction Engineering, Bryson’s early career included managing ground-up and new construction of medical facilities, hospitals, outpatient clinics, and treatment facilities in Eastern Montana and Southwestern Washington. Since joining Golden Eagle in 2019, he has focused primarily on multi-family work and commercial remodel projects, and now serves as Vice President of the Bozeman office after relocating to the Three Forks area. Bryson enjoys golfing, camping, and spending summers at his family’s cabin, and his fall calendar is usually filled with hunting and Bobcat football.`,
   },
 
   'troy-ford': {
     name: 'Troy Ford',
     slug: 'troy-ford',
-    order: '5',
+    order: '2',
     image: '/images/team/troy-ford.jpg',
     title: 'Vice President, Commercial',
     team: 'leadership',
@@ -55,7 +55,7 @@ export default {
     order: '6',
     image: '/images/team/placeholder.jpg',
     title: 'Director of Accounting/HR',
-    team: 'leadership',
+    team: 'office',
     bio: `Chad has 27+ years of business finance experience across public, private, and government practices. He has been with Golden Eagle for two years and supports business and HR operations. A Helena native, Chad enjoys Montana’s outdoors and the changing seasons, and describes himself as a “jack of all trades, master of none.”`,
   },
 
@@ -75,7 +75,7 @@ export default {
     order: '8',
     image: '/images/team/placeholder.jpg',
     title: 'Business Development',
-    team: 'leadership',
+    team: 'office',
     bio: `Jeff has more than 45 years in the construction industry, including the last 20 years focused on high-end custom homes. He has been with Golden Eagle for three years and supports residential business development and project management. Jeff coaches high school girls’ basketball, and he and his wife Julie are raising their 14-year-old granddaughter, Oli, along with their 5-year-old goldendoodle, Nico. He’s active in his local church and involved in his granddaughter’s high school community.`,
   },
 
@@ -85,7 +85,7 @@ export default {
     order: '9',
     image: '/images/team/placeholder.jpg',
     title: 'Project Manager',
-    team: 'leadership',
+    team: 'office',
     bio: `Anna is a Montana native from Great Falls. She moved to Big Sky, worked with horses through college, and graduated from Montana State University. After working as an events manager at a private club, she transitioned into high-end residential construction. While she is new to Golden Eagle, she brings seven years of residential construction experience and focuses on creating a positive client experience by bridging communication between clients, subcontractors, and the jobsite. Anna loves being outdoors, especially near water, and is an avid reader. Her dogs keep her active and entertained, and she’s enjoying getting to know the Helena community.`,
   },
 
@@ -105,7 +105,7 @@ export default {
     order: '11',
     image: '/images/team/placeholder.jpg',
     title: 'Project Engineer',
-    team: 'leadership',
+    team: 'office',
     bio: ``,
   },
 
@@ -115,7 +115,7 @@ export default {
     order: '12',
     image: '/images/team/placeholder.jpg',
     title: 'Project Engineer',
-    team: 'leadership',
+    team: 'office',
     bio: ``,
   },
 
@@ -125,7 +125,7 @@ export default {
     order: '13',
     image: '/images/team/placeholder.jpg',
     title: 'Project Engineer',
-    team: 'leadership',
+    team: 'office',
     bio: ``,
   },
 
@@ -135,7 +135,7 @@ export default {
     order: '14',
     image: '/images/team/placeholder.jpg',
     title: 'Project Engineer',
-    team: 'leadership',
+    team: 'office',
     bio: ``,
   },
 
@@ -145,7 +145,7 @@ export default {
     order: '15',
     image: '/images/team/tony-vandort.jpg',
     title: 'Superintendent',
-    team: 'leadership',
+    team: 'office',
     bio: ``,
   },
 
@@ -155,7 +155,7 @@ export default {
     order: '16',
     image: '/images/team/john-wallis.jpg',
     title: 'Superintendent',
-    team: 'leadership',
+    team: 'office',
     bio: ``,
   },
 
@@ -165,7 +165,7 @@ export default {
     order: '17',
     image: '/images/team/jason-smith.jpg',
     title: 'Superintendent',
-    team: 'leadership',
+    team: 'office',
     bio: ``,
   },
 
@@ -175,7 +175,7 @@ export default {
     order: '18',
     image: '/images/team/steve-giulio.jpg',
     title: 'Superintendent',
-    team: 'leadership',
+    team: 'office',
     bio: ``,
   },
 
@@ -185,7 +185,7 @@ export default {
     order: '19',
     image: '/images/team/placeholder.jpg',
     title: 'Superintendent',
-    team: 'leadership',
+    team: 'office',
     bio: ``,
   },
 
@@ -195,7 +195,7 @@ export default {
     order: '20',
     image: '/images/team/placeholder.jpg',
     title: 'Superintendent',
-    team: 'leadership',
+    team: 'office',
     bio: ``,
   },
 
@@ -205,7 +205,7 @@ export default {
     order: '21',
     image: '/images/team/placeholder.jpg',
     title: 'Superintendent',
-    team: 'leadership',
+    team: 'office',
     bio: ``,
   },
 
@@ -215,7 +215,7 @@ export default {
     order: '22',
     image: '/images/team/placeholder.jpg',
     title: 'Superintendent',
-    team: 'leadership',
+    team: 'office',
     bio: ``,
   },
 
@@ -225,7 +225,7 @@ export default {
     order: '23',
     image: '/images/team/placeholder.jpg',
     title: 'Superintendent',
-    team: 'leadership',
+    team: 'office',
     bio: ``,
   },
 }
