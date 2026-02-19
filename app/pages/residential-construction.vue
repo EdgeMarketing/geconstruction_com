@@ -10,7 +10,7 @@
   <section>
     <div class="container px-6 pt-32 pb-10 mx-auto">
       <div class="text-center">
-        <div class="m-auto text-4xl font-bold leading-10 text-brandGold capitalize capitalize">
+        <div class="m-auto text-4xl font-bold leading-10 capitalize text-brandGold ">
           True custom homes built to reflect your style
         </div>
         <div class="max-w-5xl mx-auto mt-3 mb-12 leading-7 tracking-wide text-brandSilver1">
@@ -34,7 +34,7 @@
       <img src="/images/residential-house1.jpg" class="w-full h-[500px] object-cover">
 
       <div class="max-w-3xl px-6 py-10 pl-6 lg:pl-12">
-        <h2 class="mb-6 text-4xl font-semibold text-brandBlue1 capitalize">
+        <h2 class="mb-6 text-4xl font-semibold capitalize text-brandBlue1">
           Bringing Your Vision to Life
         </h2>
         <p class="leading-7 text-brandSilver1">
@@ -48,7 +48,7 @@
       <!-- Text: second on mobile, first on lg+ -->
       <div class="flex justify-end order-2 lg:order-1">
         <div class="max-w-3xl px-6 py-10 pr-6 lg:pr-12">
-          <h2 class="mb-6 text-4xl font-semibold text-brandBlue1 capitalize">
+          <h2 class="mb-6 text-4xl font-semibold capitalize text-brandBlue1">
             The Construction Process Redefined
           </h2>
           <p class="leading-7 text-brandSilver1">
@@ -69,7 +69,7 @@
       <img src="/images/residential-3.jpg" class="w-full h-[500px] object-cover object-bottom">
 
       <div class="max-w-3xl px-6 py-10 pl-6 lg:pl-12">
-        <h2 class="mb-6 text-4xl font-semibold text-brandBlue1 capitalize">
+        <h2 class="mb-6 text-4xl font-semibold capitalize text-brandBlue1">
           The Scale to Bring Your Vision to Fruition
         </h2>
         <p class="leading-7 text-brandSilver1">
