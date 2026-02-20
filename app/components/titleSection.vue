@@ -1,39 +1,64 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
+import { useRoute } from 'vue-router'
 
 const props = defineProps({
-  page: {
-    type: String,
-    required: false,
-    default: '',
-  },
-  headline: {
-    type: String,
-    required: false,
-    default: '',
-  },
+  page: { type: String, default: '' },
+  headline: { type: String, default: '' },
 })
 
+const route = useRoute()
 const isVisible = ref(false)
 const bgImage = ref('')
 
-// Grab all images in /assets/images/heads/**
-// Nuxt prefers the ~/ alias here
 const modules = import.meta.glob('~/assets/heads/*.{jpg,jpeg,png,webp}', {
   eager: true,
   import: 'default',
 })
 
-// Turn them into an array of URLs and pick one
-const images = Object.values(modules)
+const allImages = Object.values(modules)
 
-if (images.length) {
-  const randomIndex = Math.floor(Math.random() * images.length)
-  bgImage.value = images[randomIndex]
+const findByName = (name) => {
+  const needle = `/${name.toLowerCase()}`
+  return allImages.find(src => src.toLowerCase().includes(needle)) || ''
 }
 
+const drywallImage = findByName('drywall.jpg')
+const excavationImage = findByName('excavation.jpg')
+const multiFamilyImage = findByName('multi-family.jpg')
+
+// Exclude fixed/override images from random pool
+const randomPool = allImages.filter(src =>
+  src !== drywallImage && src !== excavationImage && src !== multiFamilyImage,
+)
+
+const isDrywallPage = computed(() =>
+  props.page === 'drywall' || route.path === '/drywall',
+)
+
+const isExcavationPage = computed(() =>
+  props.page === 'excavation' || route.path === '/excavation',
+)
+
+const isMultiFamilyPage = computed(() =>
+  props.page === 'multi-family' || route.path === '/portfolio/multi-family',
+)
+
+// Set deterministic background for special pages during SSR + client
+if (isDrywallPage.value && drywallImage)
+  bgImage.value = drywallImage
+else if (isExcavationPage.value && excavationImage)
+  bgImage.value = excavationImage
+else if (isMultiFamilyPage.value && multiFamilyImage)
+  bgImage.value = multiFamilyImage
+
 onMounted(() => {
-  // Just for the fade-in
+  // Random ONLY for pages that are not fixed overrides
+  if (!isDrywallPage.value && !isExcavationPage.value && !isMultiFamilyPage.value && randomPool.length) {
+    const randomIndex = Math.floor(Math.random() * randomPool.length)
+    bgImage.value = randomPool[randomIndex]
+  }
+
   setTimeout(() => {
     isVisible.value = true
   }, 100)
@@ -44,7 +69,7 @@ onMounted(() => {
   <section
     class="transition-opacity duration-700 bg-fixed bg-cover page-hero"
     :class="{ 'opacity-0': !isVisible, 'opacity-100': isVisible }"
-    :style="bgImage ? `background-image: url(${bgImage})` : ''"
+    :style="bgImage ? { backgroundImage: `url(${bgImage})` } : undefined"
   >
     <div class="container relative z-50 px-6 mx-auto">
       <div class="py-32 text-center">

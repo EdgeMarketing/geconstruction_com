@@ -118,7 +118,7 @@
           class="relative block group"
         >
           <img
-            src="/images/team/placeholder.jpg"
+            src="/images/excavation2.jpg"
             alt="Excavation Services"
             class="object-cover w-full h-64"
           >

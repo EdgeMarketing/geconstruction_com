@@ -10,7 +10,7 @@
   <section>
     <div class="container px-6 pt-32 pb-1 mx-auto">
       <div class="text-center">
-        <div class="m-auto text-4xl font-bold leading-10 text-brandGold capitalize capitalize">
+        <div class="m-auto text-4xl font-bold leading-10 capitalize text-brandGold">
           Ensuring the best appearance for your building’s interior
         </div>
         <div class="max-w-5xl mx-auto mt-3 mb-12 leading-7 tracking-wide text-brandSilver1">
@@ -26,7 +26,7 @@
       <img src="/images/drywall.jpg" class="w-full h-[500px] object-cover">
 
       <div class="max-w-3xl px-6 py-10 pl-6 lg:pl-12">
-        <h2 class="mb-6 text-4xl font-semibold text-brandBlue1 capitalize">
+        <h2 class="mb-6 text-4xl font-semibold capitalize text-brandBlue1">
           The Foundation for a Flawless Finish
         </h2>
         <p class="leading-7 text-brandSilver1">

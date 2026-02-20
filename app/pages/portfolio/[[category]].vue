@@ -5,6 +5,16 @@ import { useRoute, useRouter } from 'vue-router'
 const route = useRoute()
 const router = useRouter()
 
+const shuffleSeed = ref(0)
+
+const reseedShuffle = () => {
+  // new seed any time you want a reshuffle
+  shuffleSeed.value = Math.floor(Math.random() * 1e9)
+}
+
+// run once on load
+reseedShuffle()
+
 // Top-level categories
 const CATEGORIES = [
   { key: 'all', label: 'All' },
@@ -46,6 +56,27 @@ const activeRoom = ref('all')
 const modules = import.meta.glob('@/assets/projects/**/*.{jpg,jpeg,png,webp}', {
   eager: true,
 })
+
+const seededRandom = (seed) => {
+  // simple deterministic PRNG
+  let t = seed + 0x6D2B79F5
+  return () => {
+    t += 0x6D2B79F5
+    let x = Math.imul(t ^ (t >>> 15), 1 | t)
+    x ^= x + Math.imul(x ^ (x >>> 7), 61 | x)
+    return ((x ^ (x >>> 14)) >>> 0) / 4294967296
+  }
+}
+
+const shuffleWithSeed = (arr, seed) => {
+  const rand = seededRandom(seed)
+  const out = [...arr]
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1))
+    ;[out[i], out[j]] = [out[j], out[i]]
+  }
+  return out
+}
 
 // Normalize into a flat list: [{ src, category, project, filename, room? }]
 const allImages = computed(() => {
@@ -157,7 +188,14 @@ const projectGroups = computed(() => {
     }
   }
 
-  return Array.from(map.values())
+  const groups = Array.from(map.values())
+
+  // Randomize only when showing "all"
+  if (activeCategory.value === 'all') {
+    return shuffleWithSeed(groups, shuffleSeed.value)
+  }
+
+  return groups
 })
 
 // Lightbox state
