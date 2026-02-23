@@ -71,6 +71,7 @@ onMounted(() => {
     isVisible.value = true
   }, 100)
 })
+console.log('route.path', route.path, 'cleanPath', cleanPath.value)
 </script>
 
 <template>
