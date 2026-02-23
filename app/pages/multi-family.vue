@@ -28,7 +28,7 @@
   <section class="my-24 bg-brandSilver2/10">
     <!-- Block 1 -->
     <div class="grid items-center grid-cols-1 lg:grid-cols-2">
-      <img src="/images/residential-house1.jpg" class="w-full h-[500px] object-cover">
+      <img src="/images/beautiful-apartment.jpg" class="w-full h-[500px] object-cover">
 
       <div class="max-w-3xl px-6 py-10 pl-6 lg:pl-12">
         <h2 class="mb-6 text-4xl font-semibold capitalize text-brandBlue1">
