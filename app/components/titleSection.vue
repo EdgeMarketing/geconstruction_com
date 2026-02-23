@@ -18,14 +18,22 @@ const modules = import.meta.glob('~/assets/heads/*.{jpg,jpeg,png,webp}', {
 
 const allImages = Object.values(modules)
 
-const findByName = (name) => {
-  const needle = `/${name.toLowerCase()}`
-  return allImages.find(src => src.toLowerCase().includes(needle)) || ''
+const findByStem = (stem) => {
+  const s = String(stem).toLowerCase()
+  // Works for:
+  // excavation.jpg
+  // excavation.abc123.jpg
+  // /_nuxt/.../excavation.abc123.webp (if you ever swap)
+  return allImages.find(src =>
+    src.toLowerCase().includes(`/${s}.`)
+    || src.toLowerCase().includes(`/${s}-`)
+    || src.toLowerCase().includes(`/${s}_`),
+  ) || ''
 }
 
-const drywallImage = findByName('drywall.jpg')
-const excavationImage = findByName('excavation.jpg')
-const multiFamilyImage = findByName('multi-family.jpg')
+const drywallImage = findByStem('drywall')
+const excavationImage = findByStem('excavation')
+const multiFamilyImage = findByStem('multi-family')
 
 // Exclude fixed/override images from random pool
 const randomPool = allImages.filter(src =>
@@ -48,8 +56,8 @@ const isExcavationPage = computed(() =>
 
 const isMultiFamilyPage = computed(() =>
   props.page === 'multi-family'
-  || cleanPath.value === '/portfolio/multi-family'
-  || cleanPath.value === '/multi-family',
+  || route.path === '/portfolio/multi-family'
+  || route.path === '/multi-family',
 )
 
 // Set deterministic background for special pages during SSR + client
