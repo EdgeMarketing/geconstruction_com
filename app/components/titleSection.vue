@@ -32,16 +32,24 @@ const randomPool = allImages.filter(src =>
   src !== drywallImage && src !== excavationImage && src !== multiFamilyImage,
 )
 
+// Normalize route path (handles trailing slashes in production)
+const cleanPath = computed(() => {
+  const p = String(route.path || '')
+  return p.length > 1 ? p.replace(/\/+$/, '') : p
+})
+
 const isDrywallPage = computed(() =>
-  props.page === 'drywall' || route.path === '/drywall',
+  props.page === 'drywall' || cleanPath.value === '/drywall',
 )
 
 const isExcavationPage = computed(() =>
-  props.page === 'excavation' || route.path === '/excavation',
+  props.page === 'excavation' || cleanPath.value === '/excavation',
 )
 
 const isMultiFamilyPage = computed(() =>
-  props.page === 'multi-family' || route.path === '/portfolio/multi-family',
+  props.page === 'multi-family'
+  || cleanPath.value === '/portfolio/multi-family'
+  || cleanPath.value === '/multi-family',
 )
 
 // Set deterministic background for special pages during SSR + client
