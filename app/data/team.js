@@ -140,7 +140,7 @@ export default {
   },
 
   'tony-van-dort': {
-    name: 'Tony Van Dort',
+    name: 'Tony VanDort',
     slug: 'tony-van-dort',
     order: '15',
     image: '/images/team/tony-vandort.jpg',
