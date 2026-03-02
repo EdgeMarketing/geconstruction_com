@@ -127,9 +127,21 @@ const allImages = computed(() => {
 
 // Base list filtered by top-level category
 const baseCategoryImages = computed(() => {
-  if (activeCategory.value === 'all')
+  const category = activeCategory.value
+
+  if (category === 'all') {
     return allImages.value
-  return allImages.value.filter(img => img.category === activeCategory.value)
+  }
+
+  // Commercial includes multi-family
+  if (category === 'commercial') {
+    return allImages.value.filter(img =>
+      img.category === 'commercial'
+      || img.category === 'multi-family',
+    )
+  }
+
+  return allImages.value.filter(img => img.category === category)
 })
 
 // Final filtered images (includes residential "by room" mode)
@@ -177,12 +189,12 @@ const projectGroups = computed(() => {
     const group = map.get(key)
     group.images.push(img)
 
-    // If this file is main.jpg, use it as cover
+    // Prefer main.jpg as cover
     if (img.filename?.toLowerCase() === 'main.jpg') {
       group.cover = img
     }
 
-    // Fallback: if no cover yet, use first image
+    // Fallback: first image
     if (!group.cover) {
       group.cover = img
     }
@@ -190,12 +202,8 @@ const projectGroups = computed(() => {
 
   const groups = Array.from(map.values())
 
-  // Randomize only when showing "all"
-  if (activeCategory.value === 'all') {
-    return shuffleWithSeed(groups, shuffleSeed.value)
-  }
-
-  return groups
+  // Randomize for EVERY category, but stable for this page load via shuffleSeed
+  return shuffleWithSeed(groups, shuffleSeed.value)
 })
 
 // Lightbox state

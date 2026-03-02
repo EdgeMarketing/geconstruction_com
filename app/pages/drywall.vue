@@ -16,6 +16,11 @@
         <div class="max-w-5xl mx-auto mt-3 mb-12 leading-7 tracking-wide text-brandSilver1">
           Drywall installation, also known as drywall or sheetrock hanging, is one of our specialty services because it's a crucial step in interior construction to create a smooth, paintable surface. We install drywall for both residential and commercial clients.
         </div>
+        <h4 class="mb-12 text-2xl font-bold leading-10 capitalize text-brandGold">
+          <a href="tel:+14065940743" class="hover:text-brandGold/75">
+            Call us at 406.594.0743 for drywall services.
+          </a>
+        </h4>
       </div>
     </div>
   </section>

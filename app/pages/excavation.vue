@@ -16,6 +16,11 @@
           <div class="max-w-4xl mx-auto my-12 leading-7 tracking-wide text-brandSilver1">
             If you need to remove soil, rock, and other materials from a site to prepare it for construction or other purposes, we offer comprehensive excavation services, which include:
           </div>
+          <h4 class="mb-12 text-2xl font-bold leading-10 capitalize text-brandGold">
+            <a href="tel:+14065807061" class="hover:text-brandGold/75">
+              Call us at 406.580.7061 for excavation services.
+            </a>
+          </h4>
         </div>
       </div>
     </section>
