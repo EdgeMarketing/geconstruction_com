@@ -25,7 +25,7 @@
     </div>
   </section>
 
-  <section class="my-24 bg-brandSilver2/10">
+  <section class="mt-24 bg-brandSilver2/10">
     <!-- Block 1 -->
     <div class="grid items-center grid-cols-1 lg:grid-cols-2">
       <img src="/images/beautiful-apartment.jpg" class="w-full h-[500px] object-cover">
@@ -41,4 +41,6 @@
       </div>
     </div>
   </section>
+
+  <testimonialRow />
 </template>

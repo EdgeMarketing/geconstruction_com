@@ -88,7 +88,7 @@ const staffList = computed(() => {
 </script>
 
 <template>
-  <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+  <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
     <NuxtLink
       v-for="person in staffList"
       :key="person.slug"
@@ -100,7 +100,7 @@ const staffList = computed(() => {
         <img
           :src="person.image"
           :alt="person.name"
-          class="object-cover w-full h-96"
+          class="object-cover w-full h-[400px]"
         >
 
         <!-- Corner accent -->
@@ -121,21 +121,19 @@ const staffList = computed(() => {
             </p>
             <p
               v-if="person.title"
-              class="mt-1 text-xs tracking-[0.25em] uppercase text-brandSilver1"
+              class="mt-1 text-xs tracking-[0.15em] uppercase text-brandSilver1"
             >
               {{ person.title }}
             </p>
           </div>
-
-          <!-- Only show if they actually have a bio -->
-          <span
-            v-if="person.bio && person.bio.trim().length"
-            class="transition-transform duration-200 text-brandGold/50 group-hover:translate-x-1"
-            aria-hidden="true"
-          >
-            about ›
-          </span>
-        </div>
+        </div><!-- Only show if they actually have a bio -->
+        <span
+          v-if="person.bio && person.bio.trim().length"
+          class="absolute transition-transform duration-200 right-2 top-3 text-brandGold/50 group-hover:translate-x-1"
+          aria-hidden="true"
+        >
+          <i class="fa-solid fa-arrow-right fa-xl" />
+        </span>
       </div>
     </NuxtLink>
   </div>

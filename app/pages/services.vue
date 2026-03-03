@@ -222,4 +222,6 @@
       </div>
     </div>
   </section>
+
+  <testimonialRow />
 </template>

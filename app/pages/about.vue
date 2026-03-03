@@ -68,4 +68,6 @@
       <teamCard team="office" />
     </div>
   </section>
+
+  <testimonialRow />
 </template>
