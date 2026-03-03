@@ -1,10 +1,10 @@
 <template>
   <Head>
     <Title>Crane Services | Golden Eagle Construction | Montana</Title>
-    <Meta name="description" content="When you need to lift, move, or set heavy equipment or structural components, our experienced crane team delivers safe, efficient, and reliable service. We provide specialized crane support for commercial, industrial, and residential projects of all sizes, from precision equipment placement to full-scale construction lifts. " />
+    <Meta name="description" content="When you need to lift, move, or set heavy equipment or structural components, our experienced crane team delivers safe, efficient, and reliable service. " />
     <Link rel="canonical" href="https://geconstruction.com/crane-service/" />
     <Meta property="og:title" content="Crane Services | Golden Eagle Construction | Montana" />
-    <Meta property="og:description" content="When you need to lift, move, or set heavy equipment or structural components, our experienced crane team delivers safe, efficient, and reliable service. We provide specialized crane support for commercial, industrial, and residential projects of all sizes, from precision equipment placement to full-scale construction lifts. " />
+    <Meta property="og:description" content="When you need to lift, move, or set heavy equipment or structural components, our experienced crane team delivers safe, efficient, and reliable service. " />
     <Meta property="og:url" content="https://geconstruction.com/crane-service/" />
     <Meta property="og:image" content="https://geconstruction.com/images/crane2.jpg" />
   </Head>

@@ -42,10 +42,10 @@ onUnmounted(stop)
 <template>
   <Head>
     <Title>Golden Eagle Construction | Montana</Title>
-    <Meta name="description" content="Whether you’re building a residential or a commercial property, you want to partner with a highly professional team known for its stellar reputation. At Golden Eagle Construction, we exceed your expectations by offering exceptional client service as we guide you through the design and construction of the structure you envision. We aim to make this process a positive and enjoyable experience for you, because we’re doing more than building a structure ― we’re building a partnership with you." />
+    <Meta name="description" content="Whether you’re building a residential or a commercial property, you want to partner with a highly professional team known for its stellar reputation. At Golden Eagle Construction, we exceed your expectations by offering exceptional client service as we guide you through the design and construction of the structure you envision. " />
     <Link rel="canonical" href="https://geconstruction.com/" />
     <Meta property="og:title" content="Golden Eagle Construction | Montana" />
-    <Meta property="og:description" content="Whether you’re building a residential or a commercial property, you want to partner with a highly professional team known for its stellar reputation. At Golden Eagle Construction, we exceed your expectations by offering exceptional client service as we guide you through the design and construction of the structure you envision. We aim to make this process a positive and enjoyable experience for you, because we’re doing more than building a structure ― we’re building a partnership with you." />
+    <Meta property="og:description" content="Whether you’re building a residential or a commercial property, you want to partner with a highly professional team known for its stellar reputation. At Golden Eagle Construction, we exceed your expectations by offering exceptional client service as we guide you through the design and construction of the structure you envision. " />
     <Meta property="og:url" content="https://geconstruction.com/" />
     <Meta property="og:image" content="https://geconstruction.com/images/og-image.jpg" />
   </Head>
@@ -206,7 +206,7 @@ onUnmounted(stop)
 
     <section class="grid grid-cols-12 bg-brandBlue1">
       <div class="flex items-center justify-center col-span-12 align-middle md:col-span-2">
-        <img src="/images/fireplace.jpg">
+        <img src="/images/fireplace.jpg" alt="golden eagle residential and commercial construction">
       </div>
       <div class="col-span-12 px-6 text-left md:px-24 md:col-span-4 py-28">
         <h3 class="mb-6 text-2xl font-bold text-white capitalize">

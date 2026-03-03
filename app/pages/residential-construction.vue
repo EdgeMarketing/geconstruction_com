@@ -35,7 +35,7 @@
   <section class="mt-24 bg-brandSilver2/10">
     <!-- Block 1 -->
     <div class="grid items-center grid-cols-1 lg:grid-cols-2">
-      <img src="/images/residential-house1.jpg" class="w-full h-[500px] object-cover">
+      <img src="/images/residential-house1.jpg" class="w-full h-[500px] object-cover" alt="residential construction montana">
 
       <div class="max-w-3xl px-6 py-10 pl-6 lg:pl-12">
         <h2 class="mb-6 text-4xl font-semibold capitalize text-brandBlue1">
@@ -64,13 +64,13 @@
       <!-- Image: first on mobile, second on lg+ -->
       <img
         src="/images/residential-house2.jpg"
-        class="order-1 lg:order-2 w-full h-[500px] object-cover"
+        class="order-1 lg:order-2 w-full h-[500px] object-cover" alt="residential construction montana"
       >
     </div>
 
     <!-- Block 3 -->
     <div class="grid items-center grid-cols-1 lg:grid-cols-2">
-      <img src="/images/residential-3.jpg" class="w-full h-[500px] object-cover object-bottom">
+      <img src="/images/residential-3.jpg" class="w-full h-[500px] object-cover object-bottom" alt="residential construction montana">
 
       <div class="max-w-3xl px-6 py-10 pl-6 lg:pl-12">
         <h2 class="mb-6 text-4xl font-semibold capitalize text-brandBlue1">

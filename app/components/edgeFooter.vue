@@ -85,14 +85,19 @@
 
           <ul class="space-y-3 text-sm">
             <li>
-              <NuxtLink to="https://buildertrend.net/?builderID=1585" target="_blank" class="hover:underline">
+              <a href="https://buildertrend.net/?builderID=1585" target="_blank" rel="noopener nofollow" class="hover:underline">
                 Residential Login
-              </NuxtLink>
+              </a>
             </li>
             <li>
-              <NuxtLink to="https://login.procore.com/" target="_blank" class="hover:underline">
+              <a
+                href="https://login.procore.com/"
+                target="_blank"
+                rel="noopener nofollow"
+                class="hover:underline"
+              >
                 Commercial Login
-              </NuxtLink>
+              </a>
             </li>
             <li>
               <NuxtLink to="/careers" class="hover:underline">

@@ -24,7 +24,7 @@ const staff = computed(() => {
       </Title>
       <Meta
         name="description"
-        :content="`${staff.name}, ${staff.title}, part of the Golden Eagle team.`"
+        :content="`${staff.name}, ${staff.title}, part of the Golden Eagle team. The care we devote to your project and our ability to produce high-quality work and deliver exceptional service are directly related to our ability to attract and retain talented individuals.`"
       />
       <Link
         rel="canonical"
@@ -36,7 +36,7 @@ const staff = computed(() => {
       />
       <Meta
         property="og:description"
-        :content="`${staff.name}, ${staff.title}, part of the Golden Eagle team.`"
+        :content="`${staff.name}, ${staff.title}, part of the Golden Eagle team. The care we devote to your project and our ability to produce high-quality work and deliver exceptional service are directly related to our ability to attract and retain talented individuals.`"
       />
       <Meta
         property="og:url"
@@ -102,9 +102,9 @@ const staff = computed(() => {
         <!-- RIGHT 2/3: bio text -->
         <div class="lg:col-span-2">
           <!-- You can keep or drop this heading -->
-          <h1 class="mb-6 text-3xl font-semibold text-brandBlk">
+          <h2 class="mb-6 text-3xl font-semibold text-brandBlk">
             About {{ staff.name }}
-          </h1>
+          </h2>
 
           <div class="text-lg leading-relaxed whitespace-pre-line text-brandSilver1">
             {{ staff.bio }}
