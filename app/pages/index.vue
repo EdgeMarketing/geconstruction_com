@@ -69,9 +69,9 @@ onUnmounted(stop)
       <div class="relative pt-48 pb-12 text-2xl font-light leading-relaxed text-white">
         <div class="grid grid-cols-1 gap-28 md:grid-cols-12">
           <div class="md:col-span-5">
-            <p class="text-3xl font-bold leading-[48px] pr-5 capitalize">
+            <h1 class="text-3xl font-bold leading-[48px] pr-5 capitalize">
               Your construction partner delivering high-quality residential and commercial projects
-            </p>
+            </h1>
           </div>
           <div class="md:col-span-7">
             <p class="text-lg leading-8 tracking-wide">

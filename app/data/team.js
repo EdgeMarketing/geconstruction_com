@@ -183,7 +183,7 @@ export default {
     name: 'Ramon Ramos',
     slug: 'ramon-ramos',
     order: '19',
-    image: '/images/team/Ramon-ramos.jpg',
+    image: '/images/team/ramon-ramos.jpg',
     title: 'Superintendent',
     team: 'office',
     bio: ``,

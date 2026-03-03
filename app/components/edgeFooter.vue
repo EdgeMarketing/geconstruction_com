@@ -90,7 +90,7 @@
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="https://app.procore.com/login" target="_blank" class="hover:underline">
+              <NuxtLink to="https://login.procore.com/" target="_blank" class="hover:underline">
                 Commercial Login
               </NuxtLink>
             </li>
