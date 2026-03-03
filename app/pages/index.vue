@@ -44,6 +44,10 @@ onUnmounted(stop)
     <Title>Golden Eagle Construction | Montana</Title>
     <Meta name="description" content="Whether you’re building a residential or a commercial property, you want to partner with a highly professional team known for its stellar reputation. At Golden Eagle Construction, we exceed your expectations by offering exceptional client service as we guide you through the design and construction of the structure you envision. We aim to make this process a positive and enjoyable experience for you, because we’re doing more than building a structure ― we’re building a partnership with you." />
     <Link rel="canonical" href="https://geconstruction.com/" />
+    <Meta property="og:title" content="Golden Eagle Construction | Montana" />
+    <Meta property="og:description" content="Whether you’re building a residential or a commercial property, you want to partner with a highly professional team known for its stellar reputation. At Golden Eagle Construction, we exceed your expectations by offering exceptional client service as we guide you through the design and construction of the structure you envision. We aim to make this process a positive and enjoyable experience for you, because we’re doing more than building a structure ― we’re building a partnership with you." />
+    <Meta property="og:url" content="https://geconstruction.com/" />
+    <Meta property="og:image" content="https://geconstruction.com/images/og-image.jpg" />
   </Head>
 
   <!-- Hero wrapper with overlay -->

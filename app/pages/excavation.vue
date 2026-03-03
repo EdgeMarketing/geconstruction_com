@@ -1,8 +1,12 @@
 <template>
   <Head>
     <Title>Excavation Services | Golden Eagle Construction | Montana</Title>
-    <Meta name="description" content="Founded in 1986 and owned by company president, Adam Senechal, since 2012, Golden Eagle Construction provides high-quality commercial construction and residential construction services. " />
+    <Meta name="description" content="If you need to remove soil, rock, and other materials from a site to prepare it for construction or other purposes, we offer comprehensive excavation services. " />
     <Link rel="canonical" href="https://geconstruction.com/excavation/" />
+    <Meta property="og:title" content="Excavation Services | Golden Eagle Construction | Montana" />
+    <Meta property="og:description" content="If you need to remove soil, rock, and other materials from a site to prepare it for construction or other purposes, we offer comprehensive excavation services. " />
+    <Meta property="og:url" content="https://geconstruction.com/excavation/" />
+    <Meta property="og:image" content="https://geconstruction.com/images/excavation.jpg" />
   </Head>
   <div style="background-image: url('/images/texture.png')" class="bg-fixed bg-cover">
     <titleSection headline="Excavation Services" />

@@ -1,8 +1,12 @@
 <template>
   <Head>
     <Title>About Golden Eagle Construction | Montana</Title>
-    <Meta name="description" content="Founded in 1986 and owned by company president, Adam Senechal, since 2012, Golden Eagle Construction provides high-quality commercial construction and residential construction services. " />
+    <Meta name="description" content="Founded in 1986, Golden Eagle Construction provides high-quality commercial construction and residential construction services. " />
     <Link rel="canonical" href="https://geconstruction.com/about/" />
+    <Meta property="og:title" content="About Golden Eagle Construction | Montana" />
+    <Meta property="og:description" content="Founded in 1986, Golden Eagle Construction provides high-quality commercial construction and residential construction services. " />
+    <Meta property="og:url" content="https://geconstruction.com/about/" />
+    <Meta property="og:image" content="https://geconstruction.com/images/og-image.jpg" />
   </Head>
 
   <titleSection headline="About Golden Eagle Construction" />

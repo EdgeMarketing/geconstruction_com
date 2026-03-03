@@ -1,8 +1,12 @@
 <template>
   <Head>
     <Title>Multi-Family Residential | Golden Eagle Construction | Montana</Title>
-    <Meta name="description" content="Founded in 1986 and owned by company president, Adam Senechal, since 2012, Golden Eagle Construction provides high-quality commercial construction and residential construction services. " />
-    <Link rel="canonical" href="https://geconstruction.com/residential-construction/" />
+    <Meta name="description" content="With our extensive experience in both residential and commercial construction, multi-family residences are a natural specialty for us.  " />
+    <Link rel="canonical" href="https://geconstruction.com/multi-family/" />
+    <Meta property="og:title" content="Multi-Family Residential | Golden Eagle Construction | Montana" />
+    <Meta property="og:description" content="With our extensive experience in both residential and commercial construction, multi-family residences are a natural specialty for us.  " />
+    <Meta property="og:url" content="https://geconstruction.com/multi-family/" />
+    <Meta property="og:image" content="https://geconstruction.com/images/multi-family-construction.jpg" />
   </Head>
   <titleSection headline="Multi-Family Residential Construction" />
 

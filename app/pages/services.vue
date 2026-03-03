@@ -6,6 +6,16 @@
       content="Explore Golden Eagle Construction’s full range of construction services including residential, commercial, multi-family, excavation, drywall, roofing, and crane operations."
     />
     <Link rel="canonical" href="https://geconstruction.com/services/" />
+    <Meta
+      property="og:title"
+      content="Services | Golden Eagle Construction | Montana"
+    />
+    <Meta
+      property="og:description"
+      content="Explore Golden Eagle Construction’s full range of construction services including residential, commercial, multi-family, excavation, drywall, roofing, and crane operations."
+    />
+    <Meta property="og:url" content="https://geconstruction.com/services/" />
+    <Meta property="og:image" content="https://geconstruction.com/images/og-image.jpg" />
   </Head>
 
   <titleSection headline="Our Services" />

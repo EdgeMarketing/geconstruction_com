@@ -2,6 +2,9 @@
 import { toTypedSchema } from '@vee-validate/zod'
 import * as zod from 'zod'
 
+import EdgeInput from '~/components/Input.vue'
+import EdgeTextarea from '~/components/Textarea.vue'
+
 // Zod Documentation: https://zod.dev/?id=strings
 
 const validationSchema = toTypedSchema(
@@ -30,6 +33,16 @@ const validationSchema = toTypedSchema(
       content="Get in touch with Golden Eagle Construction in Helena or Bozeman, Montana for residential, commercial, and multi-family construction projects."
     />
     <Link rel="canonical" href="https://geconstruction.com/contact/" />
+    <Meta
+      property="og:title"
+      content="Contact | Golden Eagle Construction | Montana"
+    />
+    <Meta
+      property="og:description"
+      content="Get in touch with Golden Eagle Construction in Helena or Bozeman, Montana for residential, commercial, and multi-family construction projects."
+    />
+    <Meta property="og:url" content="https://geconstruction.com/contact/" />
+    <Meta property="og:image" content="https://geconstruction.com/images/og-image.jpg" />
   </Head>
 
   <div
@@ -48,9 +61,15 @@ const validationSchema = toTypedSchema(
               Contact Details
             </h2>
 
-            <form
-              id="contact_form"
-              method="post"
+            <edge-form-fling
+              v-slot="{ submitting }"
+              form-fling-endpoint="https://formfling.com/s/KLm807Hz7BXhB8S08uuF-oFPhf8TuWOSPGEmUATyV-2t5gal"
+              turnstile-site-secret="0x4AAAAAAANxjIQsY8S7Lqur"
+              :validation-schema="validationSchema"
+              success-message="Thank you, we will be in touch soon."
+              error-message="There was an error submitting the form."
+              success-class="text-green-500"
+              error-class="text-red-500"
               class="space-y-6"
             >
               <div class="grid gap-6 md:grid-cols-2">
@@ -59,14 +78,14 @@ const validationSchema = toTypedSchema(
                   <label for="name" class="block mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-brandBlue1">
                     Name
                   </label>
-                  <input
+                  <EdgeInput
                     id="name"
                     name="name"
                     type="text"
                     placeholder="Name"
-                    class="w-full px-4 py-3 text-sm border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-brandGold focus:border-brandGold"
-                    required
-                  >
+                    class="w-full px-4 py-3 text-sm border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-brandGold focus:border-brandGold block"
+                    error-class="mt-2 text-sm text-red-500"
+                  />
                 </div>
 
                 <!-- Phone -->
@@ -74,13 +93,14 @@ const validationSchema = toTypedSchema(
                   <label for="phone" class="block mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-brandBlue1">
                     Phone
                   </label>
-                  <input
+                  <EdgeInput
                     id="phone"
                     name="phone"
-                    type="text"
+                    type="phone"
                     placeholder="Phone"
-                    class="w-full px-4 py-3 text-sm border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-brandGold focus:border-brandGold"
-                  >
+                    class="w-full px-4 py-3 text-sm border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-brandGold focus:border-brandGold block"
+                    error-class="mt-2 text-sm text-red-500"
+                  />
                 </div>
 
                 <!-- Email -->
@@ -88,14 +108,14 @@ const validationSchema = toTypedSchema(
                   <label for="email" class="block mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-brandBlue1">
                     Email
                   </label>
-                  <input
+                  <EdgeInput
                     id="email"
                     name="email"
                     type="email"
                     placeholder="Email"
-                    class="w-full px-4 py-3 text-sm border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-brandGold focus:border-brandGold"
-                    required
-                  >
+                    class="w-full px-4 py-3 text-sm border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-brandGold focus:border-brandGold block"
+                    error-class="mt-2 text-sm text-red-500"
+                  />
                 </div>
               </div>
 
@@ -104,28 +124,35 @@ const validationSchema = toTypedSchema(
                 <label for="message" class="block mb-2 text-sm font-semibold uppercase tracking-[0.15em] text-brandBlue1">
                   Message
                 </label>
-                <textarea
+                <EdgeTextarea
                   id="message"
                   name="message"
                   rows="7"
                   placeholder="Message..."
-                  class="w-full px-4 py-3 text-sm border border-gray-300 rounded-none resize-y focus:outline-none focus:ring-2 focus:ring-brandGold focus:border-brandGold"
-                  required
+                  class="w-full px-4 py-3 text-sm border border-gray-300 rounded-none resize-y focus:outline-none focus:ring-2 focus:ring-brandGold focus:border-brandGold block"
+                  error-class="mt-2 text-sm text-red-500"
                 />
               </div>
 
-              <!-- Submit + alert -->
+              <!-- Submit -->
               <div class="flex flex-col items-start gap-4 md:flex-row md:items-center">
                 <button
+                  v-if="!submitting"
                   type="submit"
                   class="px-8 py-3 text-sm font-bold tracking-[0.25em] uppercase bg-brandGold text-white hover:bg-brandGold/90 transition"
                 >
                   Send Message
                 </button>
 
-                <div id="alert" class="text-sm text-brandSilver1" />
+                <button
+                  v-else
+                  type="button"
+                  class="px-8 py-3 text-sm font-bold tracking-[0.25em] uppercase bg-brandGold/50 text-white cursor-not-allowed"
+                >
+                  Sending...
+                </button>
               </div>
-            </form>
+            </edge-form-fling>
           </div>
 
           <!-- INFO COLUMN (1/3) -->

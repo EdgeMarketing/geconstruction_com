@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /roofing-service
+Allow: /
+Sitemap: https://geconstruction.com/sitemap.xml
+

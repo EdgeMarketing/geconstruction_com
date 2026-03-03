@@ -1,8 +1,12 @@
 <template>
   <Head>
     <Title>Drywall Hanging | Golden Eagle Construction | Montana</Title>
-    <Meta name="description" content="Founded in 1986 and owned by company president, Adam Senechal, since 2012, Golden Eagle Construction provides high-quality commercial construction and residential construction services. " />
+    <Meta name="description" content="Drywall installation, also known as drywall or sheetrock hanging, is one of our specialty services because it's a crucial step in interior construction to create a smooth, paintable surface. We install drywall for both residential and commercial clients. " />
     <Link rel="canonical" href="https://geconstruction.com/drywall/" />
+    <Meta property="og:title" content="Drywall Hanging | Golden Eagle Construction | Montana" />
+    <Meta property="og:description" content="Drywall installation, also known as drywall or sheetrock hanging, is one of our specialty services because it's a crucial step in interior construction to create a smooth, paintable surface. We install drywall for both residential and commercial clients. " />
+    <Meta property="og:url" content="https://geconstruction.com/drywall/" />
+    <Meta property="og:image" content="https://geconstruction.com/images/drywall.jpg" />
   </Head>
 
   <titleSection headline="Drywall Hanging" />

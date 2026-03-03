@@ -30,6 +30,22 @@ const staff = computed(() => {
         rel="canonical"
         :href="`https://geconstruction.com/team/${staff.slug}/`"
       />
+      <Meta
+        property="og:title"
+        :content="`${staff.name} | Golden Eagle Construction`"
+      />
+      <Meta
+        property="og:description"
+        :content="`${staff.name}, ${staff.title}, part of the Golden Eagle team.`"
+      />
+      <Meta
+        property="og:url"
+        :content="`https://geconstruction.com/team/${staff.slug}/`"
+      />
+      <Meta
+        property="og:image"
+        :content="`https://geconstruction.com/images/${staff.image}`"
+      />
     </Head>
 
     <titleSection :headline="staff.name" />

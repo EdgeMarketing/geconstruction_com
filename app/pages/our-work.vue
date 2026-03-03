@@ -38,6 +38,10 @@ onUnmounted(stop)
     <Title>Our Work | Golden Eagle Construction | Montana</Title>
     <Meta name="description" content="Golden Eagle Construction is a leading, high-quality construction firm in Montana, serving both residential and commercial clients since 1986. Our diverse portfolio and commitment to outstanding project delivery have earned us a strong reputation in the region. " />
     <Link rel="canonical" href="https://geconstruction.com/our-work/" />
+    <Meta property="og:title" content="Our Work | Golden Eagle Construction | Montana" />
+    <Meta property="og:description" content="Golden Eagle Construction is a leading, high-quality construction firm in Montana, serving both residential and commercial clients since 1986. Our diverse portfolio and commitment to outstanding project delivery have earned us a strong reputation in the region. " />
+    <Meta property="og:url" content="https://geconstruction.com/our-work/" />
+    <Meta property="og:image" content="https://geconstruction.com/images/og-image.jpg" />
   </Head>
   <titleSection headline="Commercial & Residential Construction" />
 

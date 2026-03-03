@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref, watchEffect } from 'vue'
+import { computed, ref } from 'vue'
 import testimonials from '~/data/testimonials.js'
 
 const props = defineProps({
@@ -10,37 +10,24 @@ const props = defineProps({
 })
 
 const expanded = ref(false)
-const pickedIndex = ref(0)
+const total = computed(() => testimonials?.length || 0)
 
-// pick once on client so it stays stable for that page load
-watchEffect(() => {
-  expanded.value = false
+// Persist the randomly chosen index from SSR -> client for THIS route/component instance
+// Key includes route so different pages can get different picks (optional)
+const route = useRoute()
+const pickedIndex = useState(`testimonial-index:${route.path}`, () => {
+  if (!total.value)
+    return 0
 
-  if (!testimonials?.length) {
-    pickedIndex.value = 0
-    return
-  }
+  // deterministic if seed provided
+  if (props.seed !== null)
+    return Math.abs(props.seed) % total.value
 
-  // deterministic if you pass a seed
-  if (props.seed !== null) {
-    pickedIndex.value = Math.abs(props.seed) % testimonials.length
-    return
-  }
-
-  // SSR: always pick 0. Client: pick random once.
-  if (import.meta.server) {
-    pickedIndex.value = 0
-    return
-  }
-
-  // only choose once per page load
-  if (pickedIndex.value === 0) {
-    pickedIndex.value = Math.floor(Math.random() * testimonials.length)
-  }
+  // SSR-safe random pick, stored in Nuxt payload and reused on client
+  return Math.floor(Math.random() * total.value)
 })
 
 const active = computed(() => testimonials?.[pickedIndex.value] || null)
-
 const fullText = computed(() => (active.value?.quote || '').trim())
 const needsClamp = computed(() => fullText.value.length > props.maxChars)
 
@@ -56,8 +43,6 @@ const clampedText = computed(() => {
 const toggle = () => {
   expanded.value = !expanded.value
 }
-
-const total = computed(() => testimonials?.length || 0)
 
 const goTo = (i) => {
   if (!total.value)

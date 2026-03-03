@@ -6,6 +6,16 @@
       content="Explore career opportunities with Golden Eagle Construction. Join a growing team with residential, commercial, and resort development projects across Montana."
     />
     <Link rel="canonical" href="https://geconstruction.com/careers/" />
+    <Meta
+      property="og:title"
+      content="Careers | Golden Eagle Construction | Montana"
+    />
+    <Meta
+      property="og:description"
+      content="Explore career opportunities with Golden Eagle Construction. Join a growing team with residential, commercial, and resort development projects across Montana."
+    />
+    <Meta property="og:url" content="https://geconstruction.com/careers/" />
+    <Meta property="og:image" content="https://geconstruction.com/images/og-image.jpg" />
   </Head>
 
   <titleSection headline="Join Our Team" />

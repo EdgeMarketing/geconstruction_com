@@ -1,25 +1,35 @@
 <script setup>
-import { computed, ref, watch } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
 const router = useRouter()
 
+// Seed used for deterministic shuffle
 const shuffleSeed = ref(0)
 
 const reseedShuffle = () => {
-  // new seed any time you want a reshuffle
   shuffleSeed.value = Math.floor(Math.random() * 1e9)
 }
 
-// run once on load
-reseedShuffle()
+// IMPORTANT:
+// - SSR keeps seed = 0 (stable markup)
+// - Client picks a random seed after mount (no hydration mismatch)
+onMounted(() => {
+  reseedShuffle()
+})
+
+// Reshuffle when you "page load" into a different category route
+watch(
+  () => route.fullPath,
+  () => reseedShuffle(),
+)
 
 // Top-level categories
 const CATEGORIES = [
   { key: 'all', label: 'All' },
   { key: 'residential', label: 'Residential' },
-  { key: 'commercial', label: 'Commercial' },
+  { key: 'commercial', label: 'Commercial' }, // will include multi-family in data filter
   { key: 'multi-family', label: 'Multi-Family' },
 ]
 
@@ -31,7 +41,6 @@ const ROOM_TYPES = [
   { key: 'kitchens', label: 'Kitchens' },
 ]
 
-// Current category from route
 const activeCategory = computed(() => {
   const raw = route.params.category
   if (!raw)
@@ -40,25 +49,17 @@ const activeCategory = computed(() => {
 })
 
 const goToCategory = (key) => {
-  if (key === 'all') {
+  if (key === 'all')
     router.push('/portfolio')
-  }
-  else {
-    router.push(`/portfolio/${key}`)
-  }
+  else router.push(`/portfolio/${key}`)
 }
 
-// View mode for residential: 'project' or 'room'
 const viewMode = ref('project')
 const activeRoom = ref('all')
 
-// Glob all images in assets/projects/**
-const modules = import.meta.glob('@/assets/projects/**/*.{jpg,jpeg,png,webp}', {
-  eager: true,
-})
+const modules = import.meta.glob('@/assets/projects/**/*.{jpg,jpeg,png,webp}', { eager: true })
 
 const seededRandom = (seed) => {
-  // simple deterministic PRNG
   let t = seed + 0x6D2B79F5
   return () => {
     t += 0x6D2B79F5
@@ -78,15 +79,11 @@ const shuffleWithSeed = (arr, seed) => {
   return out
 }
 
-// Normalize into a flat list: [{ src, category, project, filename, room? }]
 const allImages = computed(() => {
   return Object.entries(modules).map(([path, mod]) => {
     const parts = path.split('/')
     const projectsIndex = parts.findIndex(p => p === 'projects')
     const relative = parts.slice(projectsIndex + 1)
-    // relative:
-    // ['commercial','project-a','img1.jpg']
-    // ['residential','project-a','exteriors','img1.jpg']
 
     let category = ''
     let project = ''
@@ -94,20 +91,17 @@ const allImages = computed(() => {
     let room = null
 
     if (relative.length === 3) {
-      // projects/<category>/<project>/<file>
       category = relative[0]
       project = relative[1]
       filename = relative[2]
     }
     else if (relative.length === 4 && relative[0] === 'residential') {
-      // projects/residential/<project>/<room>/<file>
       category = 'residential'
       project = relative[1]
       room = relative[2]
       filename = relative[3]
     }
     else {
-      // fallback
       category = relative[0] || ''
       project = relative[1] || ''
       filename = relative[relative.length - 1] || ''
@@ -115,36 +109,24 @@ const allImages = computed(() => {
 
     const src = mod && mod.default ? mod.default : mod
 
-    return {
-      src,
-      category,
-      project,
-      filename,
-      room,
-    }
+    return { src, category, project, filename, room }
   })
 })
 
 // Base list filtered by top-level category
+// NOTE: commercial includes multi-family here
 const baseCategoryImages = computed(() => {
-  const category = activeCategory.value
+  const cat = activeCategory.value
 
-  if (category === 'all') {
+  if (cat === 'all')
     return allImages.value
-  }
 
-  // Commercial includes multi-family
-  if (category === 'commercial') {
-    return allImages.value.filter(img =>
-      img.category === 'commercial'
-      || img.category === 'multi-family',
-    )
-  }
+  if (cat === 'commercial')
+    return allImages.value.filter(img => img.category === 'commercial' || img.category === 'multi-family')
 
-  return allImages.value.filter(img => img.category === category)
+  return allImages.value.filter(img => img.category === cat)
 })
 
-// Final filtered images (includes residential "by room" mode)
 const filteredImages = computed(() => {
   let list = baseCategoryImages.value
 
@@ -159,17 +141,12 @@ const filteredImages = computed(() => {
   return list
 })
 
-// Are we in "project view" (one card per project)?
 const isProjectView = computed(() => {
-  // For non-residential, always project view
   if (activeCategory.value !== 'residential')
     return true
-
-  // Residential: only when explicitly set
   return viewMode.value === 'project'
 })
 
-// Group images by project (used in project view)
 const projectGroups = computed(() => {
   const map = new Map()
 
@@ -189,34 +166,30 @@ const projectGroups = computed(() => {
     const group = map.get(key)
     group.images.push(img)
 
-    // Prefer main.jpg as cover
-    if (img.filename?.toLowerCase() === 'main.jpg') {
+    if (img.filename?.toLowerCase() === 'main.jpg')
       group.cover = img
-    }
 
-    // Fallback: first image
-    if (!group.cover) {
+    if (!group.cover)
       group.cover = img
-    }
   }
 
-  const groups = Array.from(map.values())
-
-  // Randomize for EVERY category, but stable for this page load via shuffleSeed
-  return shuffleWithSeed(groups, shuffleSeed.value)
+  // shuffle groups for ALL categories (and all tab)
+  return shuffleWithSeed(Array.from(map.values()), shuffleSeed.value)
 })
+
+// Flat image grid (residential "By Room") should also shuffle,
+// and lightbox needs to use the same ordered list.
+const flatImages = computed(() => shuffleWithSeed(filteredImages.value, shuffleSeed.value))
 
 // Lightbox state
 const lightboxOpen = ref(false)
-// Images currently in the lightbox (project images OR filtered set)
 const lightboxImages = ref([])
 const activeIndex = ref(0)
 
 const openLightboxForImage = (index) => {
-  // room mode or generic "flat" view
-  if (!filteredImages.value.length)
+  if (!flatImages.value.length)
     return
-  lightboxImages.value = filteredImages.value
+  lightboxImages.value = flatImages.value
   activeIndex.value = index
   lightboxOpen.value = true
 }
@@ -257,9 +230,8 @@ const activeImage = computed(() => {
   return list[activeIndex.value]
 })
 
-// If filters or view mode change while lightbox is open, just close it
 watch(
-  () => [filteredImages.value, viewMode.value, activeCategory.value],
+  () => [filteredImages.value, viewMode.value, activeCategory.value, shuffleSeed.value],
   () => {
     if (lightboxOpen.value)
       closeLightbox()
@@ -273,21 +245,20 @@ const scrollThumbs = (direction) => {
   const el = thumbStripRef.value
   if (!el)
     return
-
   const amount = el.clientWidth * 0.8
-
-  el.scrollBy({
-    left: direction === 'next' ? amount : -amount,
-    behavior: 'smooth',
-  })
+  el.scrollBy({ left: direction === 'next' ? amount : -amount, behavior: 'smooth' })
 }
 </script>
 
 <template>
   <Head>
     <Title>Our Work | Golden Eagle Construction | Montana</Title>
-    <Meta name="description" content="Founded in 1986 and owned by company president, Adam Senechal, since 2012, Golden Eagle Construction provides high-quality commercial construction and residential construction services. " />
+    <Meta name="description" content="Golden Eagle specializes in building custom single-family and multi-family residences and commercial properties for businesses." />
     <Link rel="canonical" href="https://geconstruction.com/portfolio/" />
+    <Meta property="og:title" content="Our Work | Golden Eagle Construction | Montana" />
+    <Meta property="og:description" content="Golden Eagle specializes in building custom single-family and multi-family residences and commercial properties for businesses." />
+    <Meta property="og:url" content="https://geconstruction.com/portfolio/" />
+    <Meta property="og:image" content="https://geconstruction.com/images/og-image.jpg" />
   </Head>
 
   <titleSection headline="Our Work" />
@@ -389,11 +360,11 @@ const scrollThumbs = (direction) => {
 
       <!-- ROOM / IMAGE VIEW: individual images (e.g., residential by room) -->
       <div
-        v-else-if="filteredImages.length"
+        v-else-if="flatImages.length"
         class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
       >
         <button
-          v-for="(img, index) in filteredImages"
+          v-for="(img, index) in flatImages"
           :key="img.src + index"
           type="button"
           class="relative overflow-hidden group"
