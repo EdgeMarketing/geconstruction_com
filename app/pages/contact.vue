@@ -63,7 +63,7 @@ const validationSchema = toTypedSchema(
 
             <edge-form-fling
               v-slot="{ submitting }"
-              form-fling-endpoint="https://formfling.com/s/KLm807Hz7BXhB8S08uuF-oFPhf8TuWOSPGEmUATyV-2t5gal"
+              form-fling-endpoint="https://formfling.com/s/KLm807Hz7BXhB8S08uuF-9SnuDNHfPOQAqdqyiY9h-d35l3w"
               turnstile-site-secret="0x4AAAAAAANxjIQsY8S7Lqur"
               :validation-schema="validationSchema"
               success-message="Thank you, we will be in touch soon."
@@ -244,6 +244,16 @@ const validationSchema = toTypedSchema(
                     class="text-xl text-brandBlue1 hover:text-brandGold"
                   >
                     <i class="fab fa-linkedin-in" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://www.houzz.com/pro/adamsenechal/golden-eagle-construction"
+                    target="_blank"
+                    aria-label="Houzz"
+                    class="text-xl text-brandBlue1 hover:text-brandGold"
+                  >
+                    <i class="fab fa-houzz" />
                   </a>
                 </li>
               </ul>
