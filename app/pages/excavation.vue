@@ -124,6 +124,15 @@
                   Demolishing and removing existing structures to clear a site for new construction.
                 </p>
               </div>
+
+              <div class="p-6 border border-white/15 bg-brandBlue1/25">
+                <h3 class="mb-3 text-sm font-semibold tracking-[0.2em] uppercase">
+                  Certified Septic System Installer
+                </h3>
+                <p class="text-sm leading-relaxed text-brandBlk">
+                  We are a “Certified Septic System Installer” in Lewis and Clark, Broadwater and Jefferson Counties.
+                </p>
+              </div>
             </div>
           </div>
         </div>

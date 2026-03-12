@@ -1,4 +1,5 @@
 <script setup>
+import { NuxtLink } from '#components'
 import { computed } from 'vue'
 import staffDirectory from '~/data/team.js'
 
@@ -14,6 +15,8 @@ const props = defineProps({
     default: null,
   },
 })
+
+const hasBio = person => person.bio && person.bio.trim().length
 
 /**
  * Normalize staffDirectory into an array:
@@ -89,10 +92,11 @@ const staffList = computed(() => {
 
 <template>
   <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-    <NuxtLink
+    <component
+      :is="hasBio(person) ? NuxtLink : 'div'"
       v-for="person in staffList"
       :key="person.slug"
-      :to="`/team/${person.slug}`"
+      :to="hasBio(person) ? `/team/${person.slug}` : undefined"
       class="relative block mb-10 group"
     >
       <!-- Photo -->
@@ -135,6 +139,6 @@ const staffList = computed(() => {
           <i class="fa-solid fa-arrow-right fa-xl" />
         </span>
       </div>
-    </NuxtLink>
+    </component>
   </div>
 </template>

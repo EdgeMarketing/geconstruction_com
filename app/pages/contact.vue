@@ -185,12 +185,6 @@ const validationSchema = toTypedSchema(
                       406.449.7228
                     </a>
                   </li>
-                  <li class="flex items-center gap-3">
-                    <span>
-                      <i class="fa-solid fa-fax" />
-                    </span>
-                    406.449.2290
-                  </li>
                 </ul>
               </div>
 

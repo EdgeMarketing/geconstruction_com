@@ -51,4 +51,11 @@ export default [
     quote:
       'Working with Golden Eagle Construction is always a pleasure. Their team keeps projects moving forward efficiently and is always willing to step in wherever needed to ensure success. They remain focused on the end goal—delivering a high-quality build to the client, on time.',
   },
+  {
+    name: 'Ben Tintinger, Principal Emeritus',
+    title: 'Mosaic Architecture',
+    location: '',
+    quote:
+      'In my 36-year career, I’ve worked with many commercial contractors, and Golden Eagle Construction of Helena ranks at the very top. We’ve partnered on large-scale housing projects, including the 85-unit RED Alder development and the 72-unit Twin Creek Apartments. Most recently, Twin Creek was completed ahead of schedule and under budget — a rare accomplishment in our industry. Golden Eagle’s professionalism, leadership, communication, and craftsmanship are exceptional. I highly recommend them.',
+  },
 ]

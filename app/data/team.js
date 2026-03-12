@@ -219,11 +219,11 @@ export default {
     bio: ``,
   },
 
-  'lance-vickory': {
-    name: 'Lance Vickory',
-    slug: 'lance-vickory',
+  'lance-ott': {
+    name: 'Lance Ott',
+    slug: 'lance-ott',
     order: '23',
-    image: '/images/team/lance-vickory.jpg',
+    image: '/images/team/lance-ott.jpg',
     title: 'Superintendent',
     team: 'office',
     bio: ``,
