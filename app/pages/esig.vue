@@ -44,10 +44,10 @@ const generateSignature = () => {
   const officeInfo = getOfficeInfo()
 
   signatureHtml.value = `
-<table cellpadding="0" cellspacing="0" border="0" width="500" style="width:500px;border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;">
+<table cellpadding="0" cellspacing="0" border="0" width="525" style="width:500px;border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;">
   <tr>
     <td colspan="2" style="padding:0;margin:0;font-size:0;line-height:0;">
-      <img src="${theme.top}" width="500" alt="" style="display:block;width:500px;height:auto;border:0;outline:none;text-decoration:none;">
+      <img src="${theme.top}" width="525" alt="" style="display:block;width:500px;height:auto;border:0;outline:none;text-decoration:none;">
     </td>
   </tr>
 
@@ -56,8 +56,10 @@ const generateSignature = () => {
       <img src="${theme.left}" width="250" alt="Golden Eagle Construction" style="display:block;width:250px;height:auto;border:0;outline:none;text-decoration:none;">
     </td>
 
-    <td width="250" style="width:250px;background-color:${theme.bg};padding:18px 18px 14px 0px;vertical-align:top;font-family:Arial,Helvetica,sans-serif;color:#ffffff;">
-      <div style="font-size:20px;line-height:22px;font-weight:bold;letter-spacing:1.5px;color:#ffffff;">
+<td width="275"
+  bgcolor="${theme.bg}"
+  style="width:275px;background:${theme.bg};background-color:${theme.bg};color:#ffffff;padding:11px 11px 0px 0px;vertical-align:top;font-family:Arial,Helvetica,sans-serif;">
+      <div style="font-size:18px;line-height:22px;font-weight:bold;letter-spacing:1.5px;color:#ffffff;text-transform:uppercase;">
         ${form.value.name}
       </div>
 
@@ -118,14 +120,21 @@ const generateSignature = () => {
       <div style="line-height:6px;font-size:6px;">&nbsp;</div>
 
       <div style="font-size:13px;line-height:18px;color:#ffffff;">
-        <strong>Website:</strong> ${form.value.website}
+        <strong>Website:</strong> 
+        <span style="color:#ffffff;">
+          <a href="${form.value.website.startsWith('http') ? form.value.website : `https://${form.value.website}`}"
+            style="color:#ffffff;text-decoration:none;">
+            ${form.value.website}
+          </a>
+        </span>
+        
       </div>
     </td>
   </tr>
 
   <tr>
     <td colspan="2" style="padding:0;margin:0;font-size:0;line-height:0;">
-      <img src="${theme.bottom}" width="500" alt="" style="display:block;width:500px;height:auto;border:0;outline:none;text-decoration:none;">
+      <img src="${theme.bottom}" width="525" alt="" style="display:block;width:500px;height:auto;border:0;outline:none;text-decoration:none;">
     </td>
   </tr>
 </table>
