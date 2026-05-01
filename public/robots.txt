@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Dissallow: /esig/
 Sitemap: https://geconstruction.com/sitemap.xml
 
