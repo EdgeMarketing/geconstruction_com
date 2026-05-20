@@ -44,97 +44,91 @@ const generateSignature = () => {
   const officeInfo = getOfficeInfo()
 
   signatureHtml.value = `
-<table cellpadding="0" cellspacing="0" border="0" width="525" style="width:500px;border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;">
+<table cellpadding="0" cellspacing="0" border="0" width="420" style="width:420px;border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;">
   <tr>
     <td colspan="2" style="padding:0;margin:0;font-size:0;line-height:0;">
-      <img src="${theme.top}" width="525" alt="" style="display:block;width:500px;height:auto;border:0;outline:none;text-decoration:none;">
+      <img src="${theme.top}" width="420" alt="" style="display:block;width:420px;height:auto;border:0;outline:none;text-decoration:none;">
     </td>
   </tr>
 
   <tr>
-    <td width="250" style="width:250px;padding:0;margin:0;font-size:0;line-height:0;vertical-align:top;">
-      <img src="${theme.left}" width="250" alt="Golden Eagle Construction" style="display:block;width:250px;height:auto;border:0;outline:none;text-decoration:none;">
+    <td width="200" style="width:200px;padding:0;margin:0;font-size:0;line-height:0;vertical-align:top;">
+      <img src="${theme.left}" width="200" alt="Golden Eagle Construction" style="display:block;width:200px;height:auto;border:0;outline:none;text-decoration:none;">
     </td>
 
-<td width="275"
-  bgcolor="${theme.bg}"
-  style="width:275px;background:${theme.bg};background-color:${theme.bg};color:#ffffff;padding:11px 11px 0px 0px;vertical-align:top;font-family:Arial,Helvetica,sans-serif;">
-      <div style="font-size:18px;line-height:22px;font-weight:bold;letter-spacing:1.5px;color:#ffffff;text-transform:uppercase;">
-        ${form.value.name}
-      </div>
+    <td width="220"
+      bgcolor="${theme.bg}"
+      valign="middle"
+      style="width:220px;background:${theme.bg};background-color:${theme.bg};color:#ffffff;padding:7px 9px 7px 0;vertical-align:middle;font-family:Arial,Helvetica,sans-serif;">
 
-      <div style="font-size:13px;line-height:17px;color:#ffffff;text-transform:uppercase;">
-        ${form.value.title}
-      </div>
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;border-collapse:collapse;">
+        <tr>
+          <td valign="middle" style="vertical-align:middle;font-family:Arial,Helvetica,sans-serif;color:#ffffff;">
 
-      <div style="line-height:6px;font-size:6px;">&nbsp;</div>
+            <div style="font-size:15px;line-height:18px;font-weight:bold;letter-spacing:1.2px;color:#ffffff;text-transform:uppercase;">
+              ${form.value.name}
+            </div>
 
-      <div style="font-size:13px;line-height:18px;color:#ffffff;">
+            <div style="font-size:11px;line-height:14px;color:#ffffff;text-transform:uppercase;">
+              ${form.value.title}
+            </div>
 
-        <strong>Office:</strong>
+            <div style="line-height:5px;font-size:5px;">&nbsp;</div>
 
-        <span style="color:#ffffff;">
+            <div style="font-size:11px;line-height:15px;color:#ffffff;">
+              <strong>Office:</strong>
+              <span style="color:#ffffff;">
+                <a href="tel:${cleanNumber(form.value.office)}" style="color:#ffffff;text-decoration:none;">
+                  ${form.value.office}
+                </a>
+              </span>
+              <br>
+              <strong>Cell:</strong>
+              <span style="color:#ffffff;">
+                <a href="tel:${cleanNumber(form.value.cell)}" style="color:#ffffff;text-decoration:none;">
+                  ${form.value.cell}
+                </a>
+              </span>
+            </div>
 
-          <a href="tel:${cleanNumber(form.value.office)}" style="color:#ffffff;text-decoration:none;">
+            <div style="line-height:5px;font-size:5px;">&nbsp;</div>
 
-            ${form.value.office}
+            <div style="font-size:11px;line-height:15px;color:#ffffff;">
+              <strong>Email:</strong>
+              <span style="color:#ffffff;">
+                <a href="mailto:${form.value.email}" style="color:#ffffff;text-decoration:none;">
+                  ${form.value.email}
+                </a>
+              </span>
+            </div>
 
-          </a>
+            <div style="line-height:5px;font-size:5px;">&nbsp;</div>
 
-        </span>
+            <div style="font-size:11px;line-height:14px;color:#ffffff;">
+              <strong>Address:</strong> ${officeInfo}
+            </div>
 
-        <br>
+            <div style="line-height:5px;font-size:5px;">&nbsp;</div>
 
-        <strong>Cell:</strong>
+            <div style="font-size:11px;line-height:15px;color:#ffffff;">
+              <strong>Website:</strong>
+              <span style="color:#ffffff;">
+                <a href="${form.value.website.startsWith('http') ? form.value.website : `https://${form.value.website}`}" style="color:#ffffff;text-decoration:none;">
+                  ${form.value.website}
+                </a>
+              </span>
+            </div>
 
-        <span style="color:#ffffff;">
+          </td>
+        </tr>
+      </table>
 
-          <a href="tel:${cleanNumber(form.value.cell)}" style="color:#ffffff;text-decoration:none;">
-
-            ${form.value.cell}
-
-          </a>
-
-        </span>
-
-      </div>
-
-      <div style="line-height:6px;font-size:6px;">&nbsp;</div>
-
-      <div style="font-size:13px;line-height:18px;color:#ffffff;">
-        <strong>Email:</strong>
-        <span style="color:#ffffff;">
-          <a href="mailto:${form.value.email}"
-            style="color:#ffffff;text-decoration:none;">
-            ${form.value.email}
-          </a>
-        </span>
-      </div>
-
-      <div style="line-height:6px;font-size:6px;">&nbsp;</div>
-
-      <div style="font-size:13px;line-height:17px;color:#ffffff;">
-        <strong>Address:</strong> ${officeInfo}
-      </div>
-
-      <div style="line-height:6px;font-size:6px;">&nbsp;</div>
-
-      <div style="font-size:13px;line-height:18px;color:#ffffff;">
-        <strong>Website:</strong> 
-        <span style="color:#ffffff;">
-          <a href="${form.value.website.startsWith('http') ? form.value.website : `https://${form.value.website}`}"
-            style="color:#ffffff;text-decoration:none;">
-            ${form.value.website}
-          </a>
-        </span>
-        
-      </div>
     </td>
   </tr>
 
   <tr>
     <td colspan="2" style="padding:0;margin:0;font-size:0;line-height:0;">
-      <img src="${theme.bottom}" width="525" alt="" style="display:block;width:500px;height:auto;border:0;outline:none;text-decoration:none;">
+      <img src="${theme.bottom}" width="420" alt="" style="display:block;width:420px;height:auto;border:0;outline:none;text-decoration:none;">
     </td>
   </tr>
 </table>
