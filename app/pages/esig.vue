@@ -14,122 +14,75 @@ const form = ref({
 
 const signatureHtml = ref('')
 
-const images = {
-  gold: {
-    top: 'https://geconstruction.com/images/sig-gold-top.png',
-    left: 'https://geconstruction.com/images/sig-gold-right.png',
-    bottom: 'https://geconstruction.com/images/sig-gold-bottom.png',
-    bg: '#8e7b43',
-  },
-  grey: {
-    top: 'https://geconstruction.com/images/sig-grey-top.png',
-    left: 'https://geconstruction.com/images/sig-grey-right.png',
-    bottom: 'https://geconstruction.com/images/sig-grey-bottom.png',
-    bg: '#575a5d',
-  },
+const colors = {
+  gold: '#8e7b43',
+  grey: '#575a5d',
 }
 
 const getOfficeInfo = () => {
   if (form.value.officeLayout === 'bozeman') {
-    return '7585 Shedhorn Dr<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Bozeman, MT 59718'
+    return '7585 Shedhorn Dr, Bozeman, MT 59718'
   }
 
-  return '505 Shephard Way<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Helena, MT 59601'
+  return '505 Shephard Way, Helena, MT 59601'
 }
 
 const cleanNumber = num => num.replace(/\D/g, '')
 
+const getWebsiteUrl = () => {
+  return form.value.website.startsWith('http')
+    ? form.value.website
+    : `https://${form.value.website}`
+}
+
 const generateSignature = () => {
-  const theme = images[form.value.color]
+  const accentColor = colors[form.value.color]
   const officeInfo = getOfficeInfo()
 
   signatureHtml.value = `
-<table cellpadding="0" cellspacing="0" border="0" width="420" style="width:420px;border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;">
+<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;color:#575a5d;">
   <tr>
-    <td colspan="2" style="padding:0;margin:0;font-size:0;line-height:0;">
-      <img src="${theme.top}" width="420" alt="" style="display:block;width:420px;height:auto;border:0;outline:none;text-decoration:none;">
+    <td style="padding:0 0 0 12px;border-left:4px solid ${accentColor};font-family:Arial,Helvetica,sans-serif;">
+      <div style="font-size:18px;line-height:22px;font-weight:bold;letter-spacing:1px;color:#575a5d;text-transform:uppercase;">
+        ${form.value.name}
+      </div>
+
+      <div style="font-size:13px;line-height:18px;color:${accentColor};text-transform:uppercase;padding-bottom:8px;">
+        ${form.value.title}
+      </div>
+
+      <div style="font-size:13px;line-height:19px;color:#575a5d;">
+        <strong style="color:#575a5d;">Office:</strong>
+        <a href="tel:${cleanNumber(form.value.office)}" style="color:#575a5d;text-decoration:none;">
+          ${form.value.office}
+        </a>
+        &nbsp;|&nbsp;
+        <strong style="color:#575a5d;">Cell:</strong>
+        <a href="tel:${cleanNumber(form.value.cell)}" style="color:#575a5d;text-decoration:none;">
+          ${form.value.cell}
+        </a>
+        <br>
+
+        <strong style="color:#575a5d;">Email:</strong>
+        <a href="mailto:${form.value.email}" style="color:#575a5d;text-decoration:none;">
+          ${form.value.email}
+        </a>
+        <br>
+
+        <strong style="color:#575a5d;">Address:</strong>
+        ${officeInfo}
+        <br>
+
+        <strong style="color:#575a5d;">Website:</strong>
+        <a href="${getWebsiteUrl()}" style="color:#575a5d;text-decoration:none;">
+          ${form.value.website}
+        </a>
+      </div>
     </td>
-  </tr>
-
-  <tr>
-    <td width="200" style="width:200px;padding:0;margin:0;font-size:0;line-height:0;vertical-align:top;">
-      <img src="${theme.left}" width="200" alt="Golden Eagle Construction" style="display:block;width:200px;height:auto;border:0;outline:none;text-decoration:none;">
-    </td>
-
-    <td width="220"
-      bgcolor="${theme.bg}"
-      valign="middle"
-      style="width:220px;background:${theme.bg};background-color:${theme.bg};color:#ffffff;padding:7px 9px 7px 0;vertical-align:middle;font-family:Arial,Helvetica,sans-serif;">
-
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;border-collapse:collapse;">
-        <tr>
-          <td valign="middle" style="vertical-align:middle;font-family:Arial,Helvetica,sans-serif;color:#ffffff;">
-
-            <div style="font-size:15px;line-height:18px;font-weight:bold;letter-spacing:1.2px;color:#ffffff;text-transform:uppercase;">
-              ${form.value.name}
-            </div>
-
-            <div style="font-size:11px;line-height:14px;color:#ffffff;text-transform:uppercase;">
-              ${form.value.title}
-            </div>
-
-            <div style="line-height:5px;font-size:5px;">&nbsp;</div>
-
-            <div style="font-size:11px;line-height:15px;color:#ffffff;">
-              <strong>Office:</strong>
-              <span style="color:#ffffff;">
-                <a href="tel:${cleanNumber(form.value.office)}" style="color:#ffffff;text-decoration:none;">
-                  ${form.value.office}
-                </a>
-              </span>
-              <br>
-              <strong>Cell:</strong>
-              <span style="color:#ffffff;">
-                <a href="tel:${cleanNumber(form.value.cell)}" style="color:#ffffff;text-decoration:none;">
-                  ${form.value.cell}
-                </a>
-              </span>
-            </div>
-
-            <div style="line-height:5px;font-size:5px;">&nbsp;</div>
-
-            <div style="font-size:11px;line-height:15px;color:#ffffff;">
-              <strong>Email:</strong>
-              <span style="color:#ffffff;">
-                <a href="mailto:${form.value.email}" style="color:#ffffff;text-decoration:none;">
-                  ${form.value.email}
-                </a>
-              </span>
-            </div>
-
-            <div style="line-height:5px;font-size:5px;">&nbsp;</div>
-
-            <div style="font-size:11px;line-height:14px;color:#ffffff;">
-              <strong>Address:</strong> ${officeInfo}
-            </div>
-
-            <div style="line-height:5px;font-size:5px;">&nbsp;</div>
-
-            <div style="font-size:11px;line-height:15px;color:#ffffff;">
-              <strong>Website:</strong>
-              <span style="color:#ffffff;">
-                <a href="${form.value.website.startsWith('http') ? form.value.website : `https://${form.value.website}`}" style="color:#ffffff;text-decoration:none;">
-                  ${form.value.website}
-                </a>
-              </span>
-            </div>
-
-          </td>
-        </tr>
-      </table>
-
-    </td>
-  </tr>
-
-  <tr>
-    <td colspan="2" style="padding:0;margin:0;font-size:0;line-height:0;">
-      <img src="${theme.bottom}" width="420" alt="" style="display:block;width:420px;height:auto;border:0;outline:none;text-decoration:none;">
-    </td>
+    <tr>
+      <td style="padding:20px 0 0 0;">
+        <img src="http://geconstruction.com/images/logo.png" alt="GE Construction Logo" style="height:30px;">
+      </td>
   </tr>
 </table>
 `
