@@ -19,6 +19,8 @@ const colors = {
   grey: '#575a5d',
 }
 
+const uppercaseText = value => (value || '').toUpperCase()
+
 const getOfficeInfo = () => {
   if (form.value.officeLayout === 'bozeman') {
     return '7585 Shedhorn Dr, Bozeman, MT 59718'
@@ -43,13 +45,13 @@ const generateSignature = () => {
 <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;color:#575a5d;">
   <tr>
     <td style="padding:0 0 0 12px;border-left:4px solid ${accentColor};font-family:Arial,Helvetica,sans-serif;">
-      <div style="font-size:18px;line-height:22px;font-weight:bold;letter-spacing:1px;color:#575a5d;text-transform:uppercase;">
-        ${form.value.name}
-      </div>
+      <div style="font-size:18px;line-height:22px;font-weight:bold;letter-spacing:1px;color:#575a5d;">
+  ${uppercaseText(form.value.name)}
+</div>
 
-      <div style="font-size:13px;line-height:18px;color:${accentColor};text-transform:uppercase;padding-bottom:8px;">
-        ${form.value.title}
-      </div>
+<div style="font-size:13px;line-height:18px;color:${accentColor};padding-bottom:8px;">
+  ${uppercaseText(form.value.title)}
+</div>
 
       <div style="font-size:13px;line-height:19px;color:#575a5d;">
         <strong style="color:#575a5d;">Office:</strong>
@@ -115,15 +117,6 @@ const copyWysiwyg = async () => {
       <input v-model="form.cell" type="text" placeholder="Cell Phone">
       <input v-model="form.email" type="email" placeholder="Email">
       <input v-model="form.website" type="text" placeholder="Website">
-
-      <select v-model="form.color">
-        <option value="gold">
-          Gold
-        </option>
-        <option value="grey">
-          Grey
-        </option>
-      </select>
 
       <select v-model="form.officeLayout">
         <option value="helena">
