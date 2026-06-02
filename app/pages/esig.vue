@@ -9,15 +9,9 @@ const form = ref({
   email: 'Adam@GEConstruction.com',
   website: 'GEConstruction.com',
   officeLayout: 'helena',
-  color: 'gold',
 })
 
 const signatureHtml = ref('')
-
-const colors = {
-  gold: '#8e7b43',
-  grey: '#575a5d',
-}
 
 const uppercaseText = value => (value || '').toUpperCase()
 
@@ -38,55 +32,55 @@ const getWebsiteUrl = () => {
 }
 
 const generateSignature = () => {
-  const accentColor = colors[form.value.color]
   const officeInfo = getOfficeInfo()
 
   signatureHtml.value = `
-<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;color:#575a5d;">
-  <tr>
-    <td style="padding:0 0 0 12px;border-left:4px solid ${accentColor};font-family:Arial,Helvetica,sans-serif;">
-      <div style="font-size:18px;line-height:22px;font-weight:bold;letter-spacing:1px;color:#575a5d;">
-  ${uppercaseText(form.value.name)}
+<div style="font-family:Arial,Helvetica,sans-serif;color:#575a5d;font-size:13px;line-height:19px;mso-line-height-rule:exactly;margin:0;padding:0;">
+  <div style="font-size:18px;line-height:22px;mso-line-height-rule:exactly;font-weight:bold;letter-spacing:1px;color:#575a5d;margin:0;padding:0;">
+    ${uppercaseText(form.value.name)}
+  </div>
+
+  <div style="font-size:13px;line-height:18px;mso-line-height-rule:exactly;color:#8e7b43;margin:0 0 8px 0;padding:0;">
+    ${uppercaseText(form.value.title)}
+  </div>
+
+  <div style="font-size:13px;line-height:19px;mso-line-height-rule:exactly;color:#575a5d;margin:0;padding:0;">
+    <strong style="color:#575a5d;">Office:</strong>
+    <a href="tel:${cleanNumber(form.value.office)}" style="color:#575a5d;text-decoration:none;">
+      ${form.value.office}
+    </a>
+  </div>
+
+  <div style="font-size:13px;line-height:19px;mso-line-height-rule:exactly;color:#575a5d;margin:0;padding:0;">
+    <strong style="color:#575a5d;">Cell:</strong>
+    <a href="tel:${cleanNumber(form.value.cell)}" style="color:#575a5d;text-decoration:none;">
+      ${form.value.cell}
+    </a>
+  </div>
+
+  <div style="font-size:13px;line-height:19px;mso-line-height-rule:exactly;color:#575a5d;margin:0;padding:0;">
+    <strong style="color:#575a5d;">Email:</strong>
+    <a href="mailto:${form.value.email}" style="color:#575a5d;text-decoration:none;">
+      ${form.value.email}
+    </a>
+  </div>
+
+  <div style="font-size:13px;line-height:19px;mso-line-height-rule:exactly;color:#575a5d;margin:0;padding:0;">
+    <strong style="color:#575a5d;">Address:</strong>
+    ${officeInfo}
+  </div>
+
+  <div style="font-size:13px;line-height:19px;mso-line-height-rule:exactly;color:#575a5d;margin:0;padding:0;">
+    <strong style="color:#575a5d;">Website:</strong>
+    <a href="${getWebsiteUrl()}" style="color:#575a5d;text-decoration:none;">
+      ${form.value.website}
+    </a>
+  </div>
+
+  <div style="margin:14px 0 0 0;padding:0;">
+    <img src="https://geconstruction.com/images/logo.png" alt="Golden Eagle Construction Logo" width="250" style="display:block;width:250px;max-width:250px;height:auto;border:0;outline:none;text-decoration:none;margin:0;padding:0;">
+  </div>
 </div>
-
-<div style="font-size:13px;line-height:18px;color:${accentColor};padding-bottom:8px;">
-  ${uppercaseText(form.value.title)}
-</div>
-
-      <div style="font-size:13px;line-height:19px;color:#575a5d;">
-        <strong style="color:#575a5d;">Office:</strong>
-        <a href="tel:${cleanNumber(form.value.office)}" style="color:#575a5d;text-decoration:none;">
-          ${form.value.office}
-        </a>
-        &nbsp;|&nbsp;
-        <strong style="color:#575a5d;">Cell:</strong>
-        <a href="tel:${cleanNumber(form.value.cell)}" style="color:#575a5d;text-decoration:none;">
-          ${form.value.cell}
-        </a>
-        <br>
-
-        <strong style="color:#575a5d;">Email:</strong>
-        <a href="mailto:${form.value.email}" style="color:#575a5d;text-decoration:none;">
-          ${form.value.email}
-        </a>
-        <br>
-
-        <strong style="color:#575a5d;">Address:</strong>
-        ${officeInfo}
-        <br>
-
-        <strong style="color:#575a5d;">Website:</strong>
-        <a href="${getWebsiteUrl()}" style="color:#575a5d;text-decoration:none;">
-          ${form.value.website}
-        </a>
-      </div>
-    </td>
-    <tr>
-      <td style="padding:20px 0 0 0;">
-        <img src="http://geconstruction.com/images/logo.png" alt="GE Construction Logo" style="height:30px;">
-      </td>
-  </tr>
-</table>
 `
 }
 
