@@ -78,7 +78,7 @@ const generateSignature = () => {
   </div>
 
   <div style="margin:14px 0 0 0;padding:0;">
-    <img src="https://geconstruction.com/images/logo.png" alt="Golden Eagle Construction Logo" width="250" style="display:block;width:250px;max-width:250px;height:auto;border:0;outline:none;text-decoration:none;margin:0;padding:0;">
+    <img src="https://geconstruction.com/images/emaiLogo.png" alt="Golden Eagle Construction Logo" width="250" style="display:block;width:250px;max-width:250px;height:auto;border:0;outline:none;text-decoration:none;margin:0;padding:0;">
   </div>
 </div>
 `
