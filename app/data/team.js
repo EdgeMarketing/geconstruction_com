@@ -96,7 +96,7 @@ export default {
     image: '/images/team/rachel-stone.jpg',
     title: 'Project Manager',
     team: 'office',
-    bio: `Rachel’s background includes work as an oil and gas landman specializing in acquisitions and title curation, along with experience in construction management and real estate. She has been with Golden Eagle since April 2023 and supports project management. Rachel is big into fly fishing and jokes that she works to support her fishing habit. If she’s not on the water, she’s probably thinking about swinging a two-handed rod for steelhead.`,
+    bio: `Rachel is a dedicated Construction Project Manager with over eight years of hands-on experience delivering high-end luxury residential projects in Southwest Montana. Since 2016, she has led multiple complex custom homes and commercial builds in the Yellowstone Club, One & Only Branded Residences, and for private clients across the region. Rachel has been a part of the Golden Eagle team since April 2023 and currently manages residential construction for our Bozeman division. <br/>Outside of work, Rachel and her husband live in West Yellowstone and enjoy everything the area has to offer. Raised outdoors, she jokes that she works to support her fishing and hunting habits. When she’s not working, you’ll almost always find her outside chasing the next adventure with her dogs.`,
   },
 
   'kody-sloane': {
@@ -225,6 +225,16 @@ export default {
     order: '23',
     image: '/images/team/lance-ott.jpg',
     title: 'Superintendent',
+    team: 'office',
+    bio: ``,
+  },
+
+  'delani-nelson': {
+    name: 'Delani Nelson',
+    slug: 'delani-nelson',
+    order: '25',
+    image: '/images/team/delani-nelson.jpg',
+    title: 'Project Engineer',
     team: 'office',
     bio: ``,
   },

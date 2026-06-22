@@ -106,9 +106,10 @@ const staff = computed(() => {
             About {{ staff.name }}
           </h2>
 
-          <div class="text-lg leading-relaxed whitespace-pre-line text-brandSilver1">
-            {{ staff.bio }}
-          </div>
+          <div
+            class="text-lg leading-relaxed text-brandSilver1"
+            v-html="staff.bio"
+          />
         </div>
       </div>
     </section>
