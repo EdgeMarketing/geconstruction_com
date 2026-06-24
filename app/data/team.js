@@ -40,10 +40,10 @@ export default {
   },
 
   'troy-ford': {
-    name: 'Troy Ford',
+    name: 'Troy "Mario" Ford',
     slug: 'troy-ford',
     order: '2',
-    image: '/images/team/troy-ford.jpg',
+    image: '/images/team/troy-ford-mario.jpg',
     title: 'Vice President, Commercial',
     team: 'leadership',
     bio: `Troy graduated from Montana State University with a degree in construction engineering and has been with Golden Eagle for 11 years managing commercial projects. His work includes project management, estimating and pre-construction services, business development, and safety. Outside of being a dad, Troy spends much of the year outdoors, with fall dedicated to hunting and Bobcat football. He admits that when he picks up a hobby, he tends to go “all out,” and has learned to be selective about which new pursuits make the list.`,
