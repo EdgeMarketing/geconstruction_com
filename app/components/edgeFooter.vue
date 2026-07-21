@@ -16,7 +16,7 @@
               </span>
               <span>
                 505 Shephard Way<br>
-                Helena, Montana
+                Helena, MT 59601
               </span>
             </li>
             <li class="flex items-center gap-3">
@@ -40,7 +40,7 @@
               </span>
               <span>
                 7585 Shedhorn Dr<br>
-                Bozeman, Montana
+                Bozeman, MT 59718
               </span>
             </li>
             <li class="flex items-center gap-3">

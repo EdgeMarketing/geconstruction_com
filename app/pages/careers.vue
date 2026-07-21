@@ -18,7 +18,7 @@
     <Meta property="og:image" content="https://geconstruction.com/images/og-image.jpg" />
   </Head>
 
-  <titleSection headline="Join Our Team" />
+  <titleSection headline="Construction Careers in Montana" />
 
   <!-- CONTENT -->
   <section class="py-24">

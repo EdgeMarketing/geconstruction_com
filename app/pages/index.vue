@@ -1,4 +1,5 @@
 <script setup>
+import { useHead } from '#imports'
 import { onMounted, onUnmounted, ref } from 'vue'
 import imgRotator3 from '~/assets/projects/commercial/bill-roberts-golf-course/DJI_0200.jpg'
 import imgRotator1 from '~/assets/projects/commercial/montana-land-reliance/MRL-01-12in.jpg'
@@ -13,11 +14,11 @@ useHead({
 })
 
 const slides = [
-  { src: imgRotator1, alt: '' },
-  { src: imgRotator2, alt: '' },
-  { src: imgRotator3, alt: '' },
-  { src: imgRotator4, alt: '' },
-  { src: imgRotator5, alt: '' },
+  { src: imgRotator1, alt: 'Montana Land Reliance commercial building constructed by Golden Eagle Construction' },
+  { src: imgRotator2, alt: 'Mountain Craftsman custom home built in Montana by Golden Eagle Construction' },
+  { src: imgRotator3, alt: 'Bill Roberts Golf Course clubhouse construction project in Helena, Montana' },
+  { src: imgRotator4, alt: 'Twin Creek Apartments multi-family construction project in Montana' },
+  { src: imgRotator5, alt: 'Town Pump car wash commercial construction project in Montana' },
 ]
 
 const idx = ref(0)
@@ -41,11 +42,11 @@ onUnmounted(stop)
 
 <template>
   <Head>
-    <Title>Golden Eagle Construction | Montana</Title>
-    <Meta name="description" content="Whether you’re building a residential or a commercial property, you want to partner with a highly professional team known for its stellar reputation. At Golden Eagle Construction, we exceed your expectations by offering exceptional client service as we guide you through the design and construction of the structure you envision. " />
+    <Title>Custom Home Builders in Montana | Golden Eagle Construction | Montana</Title>
+    <Meta name="description" content="Golden Eagle Construction builds custom homes and commercial and multi-family projects across Helena, Bozeman, Big Sky, southwestern Montana, and Billings." />
     <Link rel="canonical" href="https://geconstruction.com/" />
-    <Meta property="og:title" content="Golden Eagle Construction | Montana" />
-    <Meta property="og:description" content="Whether you’re building a residential or a commercial property, you want to partner with a highly professional team known for its stellar reputation. At Golden Eagle Construction, we exceed your expectations by offering exceptional client service as we guide you through the design and construction of the structure you envision. " />
+    <Meta property="og:title" content="Custom Home Builders in Montana | Golden Eagle Construction | Montana" />
+    <Meta property="og:description" content="Golden Eagle Construction builds custom homes and commercial and multi-family projects across Helena, Bozeman, Big Sky, southwestern Montana, and Billings." />
     <Meta property="og:url" content="https://geconstruction.com/" />
     <Meta property="og:image" content="https://geconstruction.com/images/og-image.jpg" />
   </Head>
@@ -53,7 +54,7 @@ onUnmounted(stop)
   <!-- Hero wrapper with overlay -->
   <div class="relative w-full h-[70vh] overflow-hidden blue1GradUp">
     <img
-      src="/images/hero.jpg" alt="Custom Home"
+      src="/images/hero.jpg" alt="Custom home built in Montana by Golden Eagle Construction"
       class="absolute inset-0 z-0 object-cover w-full h-full"
     >
   </div>
@@ -78,7 +79,7 @@ onUnmounted(stop)
           </div>
           <div class="md:col-span-7">
             <p class="text-lg leading-8 tracking-wide">
-              Whether you’re building a residential or a commercial property, you want to partner with a highly professional team known for its stellar reputation. At Golden Eagle Construction, we exceed your expectations by offering exceptional client service as we guide you through the design and construction of the structure you envision. We aim to make this process a positive and enjoyable experience for you, because we’re doing more than building a structure ― we’re building a partnership with you.
+              Whether you’re building a residential or a commercial property, you want to partner with a highly professional team known for its stellar reputation. From our Helena and Bozeman offices, we serve residential and commercial clients in Helena, Bozeman, Big Sky and throughout southwestern Montana, while our commercial and multi-family teams also deliver projects in Billings. At Golden Eagle Construction, we exceed your expectations through exceptional client service as we guide you through the design and construction of the structure you envision. We aim to make the process positive and enjoyable, because we’re doing more than building a structure ― we’re building a partnership with you.
             </p>
           </div>
         </div>
@@ -209,7 +210,7 @@ onUnmounted(stop)
 
     <section class="grid grid-cols-12 bg-brandBlue1">
       <div class="flex items-center justify-center col-span-12 align-middle md:col-span-2">
-        <img src="/images/fireplace.jpg" alt="golden eagle residential and commercial construction">
+        <img src="/images/fireplace.jpg" alt="Custom stone fireplace in a Montana home built by Golden Eagle Construction">
       </div>
       <div class="col-span-12 px-6 text-left md:px-24 md:col-span-4 py-28">
         <h3 class="mb-6 text-2xl font-bold text-white capitalize">

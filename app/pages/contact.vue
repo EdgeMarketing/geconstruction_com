@@ -49,7 +49,7 @@ const validationSchema = toTypedSchema(
     class="bg-fixed bg-cover"
     style="background-image: url('/images/texture.png')"
   >
-    <titleSection headline="Contact Us" />
+    <titleSection headline="Contact Us in Montana" />
 
     <!-- MAIN CONTENT -->
     <section class="py-24 bg-white/95">
@@ -174,7 +174,7 @@ const validationSchema = toTypedSchema(
                     </span>
                     <span>
                       505 Shephard Way<br>
-                      Helena, Montana
+                      Helena, MT 59601
                     </span>
                   </li>
                   <li class="flex items-center gap-3">
@@ -202,7 +202,7 @@ const validationSchema = toTypedSchema(
                     </span>
                     <span>
                       7585 Shedhorn Dr<br>
-                      Bozeman, Montana
+                      Bozeman, MT 59718
                     </span>
                   </li>
                   <li class="flex items-center gap-3">

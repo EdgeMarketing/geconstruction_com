@@ -8,7 +8,7 @@
     <Meta property="og:url" content="https://geconstruction.com/multi-family/" />
     <Meta property="og:image" content="https://geconstruction.com/images/multi-family-construction.jpg" />
   </Head>
-  <titleSection headline="Multi-Family Residential Construction" />
+  <titleSection headline="Multi-Family Construction in Montana" />
 
   <section>
     <div class="container px-6 pt-32 pb-10 mx-auto">
@@ -17,7 +17,7 @@
           Residential properties that radiate fine craftmanship and style
         </div>
         <div class="max-w-5xl mx-auto mt-3 mb-12 leading-7 tracking-wide text-brandSilver1">
-          With our extensive experience in both residential and commercial construction, multi-family residences are a natural specialty for us. Our multi-family construction projects have encompassed various types, from small-scale duplexes and triplexes to mid-rise and larger apartment buildings, and even special-purpose multifamily properties targeting specific populations. These projects focus on energy efficiency and providing cost-effective housing solutions that maximize the return on investment for our clients.
+          With our extensive experience in both residential and commercial construction, multi-family residences are a natural specialty for us. We bring that experience to projects in Helena, Bozeman, Big Sky, Billings and communities across southwestern Montana. Our work ranges from small-scale duplexes and triplexes to mid-rise apartment buildings and special-purpose properties, with a focus on energy efficiency, cost-effective housing and long-term value for our clients.
         </div>
         <NuxtLink
           to="/portfolio/multi-family/"

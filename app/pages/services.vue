@@ -18,7 +18,7 @@
     <Meta property="og:image" content="https://geconstruction.com/images/og-image.jpg" />
   </Head>
 
-  <titleSection headline="Our Services" />
+  <titleSection headline="Construction Services in Montana" />
 
   <!-- INTRO -->
   <section>
@@ -30,8 +30,9 @@
 
         <p class="mt-8 leading-7 tracking-wide text-brandSilver1">
           Since 1986, Golden Eagle Construction has delivered industry-leading construction services across Montana.
-          Our experienced team specializes in residential, commercial, and multi-family construction, supported by
-          in-house excavation, drywall, roofing, and crane services. Explore the full scope of what we offer.
+          We serve residential and commercial clients in Helena, Bozeman, Big Sky and southwestern Montana, as well as
+          commercial and multi-family clients in Billings. Our construction teams are supported by in-house excavation,
+          drywall, roofing and crane services.
         </p>
       </div>
     </div>

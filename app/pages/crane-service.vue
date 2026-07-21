@@ -9,7 +9,7 @@
     <Meta property="og:image" content="https://geconstruction.com/images/crane2.jpg" />
   </Head>
 
-  <titleSection headline="Crane Services" />
+  <titleSection headline="Crane Services in Montana" />
 
   <section>
     <div class="container px-6 pt-32 pb-10 mx-auto">
@@ -18,7 +18,7 @@
           Exceptional crane services for all your hoisting and rigging needs
         </div>
         <div class="max-w-4xl mx-auto my-12 leading-7 tracking-wide text-brandSilver1">
-          When you need to lift or move heavy goods or parts of your property, we’re the company to call.
+          When you need to lift or move heavy goods or parts of your property in Helena, Bozeman or the surrounding Montana communities we serve, we’re the company to call.
         </div>
       </div>
     </div>

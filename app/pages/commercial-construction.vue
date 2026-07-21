@@ -1,15 +1,15 @@
 <template>
   <Head>
     <Title>Commercial Construction | Golden Eagle Construction | Montana</Title>
-    <Meta name="description" content="FAs one of the largest construction companies in the area, we have been competitive players in the commercial building industry across Montana. " />
+    <Meta name="description" content="Commercial construction in Montana for clients in Helena, Bozeman, Big Sky, southwestern Montana, and Billings, backed by four decades of experience." />
     <Link rel="canonical" href="https://geconstruction.com/commercial-construction/" />
     <Meta property="og:title" content="Commercial Construction | Golden Eagle Construction | Montana" />
-    <Meta property="og:description" content="As one of the largest construction companies in the area, we have been competitive players in the commercial building industry across Montana. " />
+    <Meta property="og:description" content="Commercial construction in Montana for clients in Helena, Bozeman, Big Sky, southwestern Montana, and Billings, backed by four decades of experience." />
     <Meta property="og:url" content="https://geconstruction.com/commercial-construction/" />
     <Meta property="og:image" content="https://geconstruction.com/images/og-image.jpg" />
   </Head>
 
-  <titleSection headline="Commercial Construction" />
+  <titleSection headline="Commercial Construction in Montana" />
 
   <section>
     <div class="container px-6 py-32 mx-auto">
@@ -18,7 +18,7 @@
           Meeting the industry’s highest standards for every project
         </div>
         <div class="max-w-5xl mx-auto mt-3 mb-12 leading-7 tracking-wide text-brandSilver1">
-          As one of the largest construction companies in the area, we have been competitive players in the commercial building industry across Montana. Over our 40 years in business, we have adopted the latest innovations and technology, developed strong relationships with suppliers and subcontractors, and refined our estimating and bidding process to achieve the best value for our clients.
+          As one of the largest construction companies in the area, we have been competitive players in the commercial building industry across Montana. Our commercial teams work in Helena, Bozeman, Big Sky and throughout southwestern Montana, with additional commercial and multi-family experience in Billings. Over our 40 years in business, we have adopted the latest innovations and technology, developed strong relationships with suppliers and subcontractors, and refined our estimating and bidding process to achieve the best value for our clients.
         </div>
         <NuxtLink
           to="/portfolio/commercial"

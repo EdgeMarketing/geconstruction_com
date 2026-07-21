@@ -9,7 +9,7 @@
     <Meta property="og:image" content="https://geconstruction.com/images/drywall.jpg" />
   </Head>
 
-  <titleSection headline="Drywall Hanging" />
+  <titleSection headline="Drywall Hanging in Montana" />
 
   <section>
     <div class="container px-6 pt-32 pb-1 mx-auto">
@@ -18,7 +18,7 @@
           Ensuring the best appearance for your building’s interior
         </div>
         <div class="max-w-5xl mx-auto mt-3 mb-12 leading-7 tracking-wide text-brandSilver1">
-          Drywall installation, also known as drywall or sheetrock hanging, is one of our specialty services because it's a crucial step in interior construction to create a smooth, paintable surface. We install drywall for both residential and commercial clients.
+          Drywall installation, also known as drywall or sheetrock hanging, is one of our specialty services because it's a crucial step in interior construction to create a smooth, paintable surface. We install drywall for residential and commercial clients in Helena, Bozeman and the surrounding Montana communities we serve.
         </div>
         <h4 class="mb-12 text-2xl font-bold leading-10 capitalize text-brandGold">
           <a href="tel:+14065940743" class="hover:text-brandGold/75">

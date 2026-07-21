@@ -9,7 +9,7 @@
     <Meta property="og:image" content="https://geconstruction.com/images/residential-house2.jpg" />
   </Head>
 
-  <titleSection headline="Residential Construction" />
+  <titleSection headline="Residential Construction in Montana" />
 
   <section>
     <div class="container px-6 pt-32 pb-10 mx-auto">
@@ -19,7 +19,7 @@
         </div>
         <div class="max-w-5xl mx-auto mt-3 mb-12 leading-7 tracking-wide text-brandSilver1">
           Your home is more than just a place to live. It’s where family ties grow stronger and friends are always welcome.<br>
-          Golden Eagle Construction has earned a reputation for creating truly unique custom homes that showcase our clients' individual styles in every detail. With over 40 years of experience, we have built a diverse portfolio of custom homes, from contemporary to rustic, including the latest innovations in energy efficiency, technology, and security.
+          Golden Eagle Construction has earned a reputation for creating truly unique custom homes in Helena, Bozeman, Big Sky and throughout southwestern Montana. With over 40 years of experience, we have built homes from contemporary to rustic that showcase each client’s individual style while incorporating the latest innovations in energy efficiency, technology and security.
         </div>
 
         <NuxtLink

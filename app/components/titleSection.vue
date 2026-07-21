@@ -90,7 +90,10 @@ console.log('route.path', route.path, 'cleanPath', cleanPath.value)
   >
     <div class="container relative z-50 px-6 mx-auto">
       <div class="py-32 text-center">
-        <h1 class="text-4xl font-bold leading-10 lg:text-7xl text-brandBlue1 font-sansAccent2">
+        <h1
+          class="text-4xl font-bold leading-tight text-brandBlue1 font-sansAccent2"
+          :class="headline.length > 36 ? 'lg:text-6xl' : 'lg:text-7xl'"
+        >
           {{ headline }}
         </h1>
       </div>

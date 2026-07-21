@@ -9,7 +9,7 @@
     <Meta property="og:image" content="https://geconstruction.com/images/og-image.jpg" />
   </Head>
 
-  <titleSection headline="About Golden Eagle Construction" />
+  <titleSection headline="About Golden Eagle Construction in Montana" />
 
   <section>
     <div class="container px-6 py-32 mx-auto">
@@ -32,6 +32,9 @@
               Led by a strong leadership team of expert heads of our residential and
               commercial divisions, Golden Eagle’s employees across our Helena and Bozeman
               offices and in the field are among the best in the construction industry.
+              Our teams serve residential and commercial clients in Helena, Bozeman,
+              Big Sky and across southwestern Montana, along with commercial and
+              multi-family clients in Billings.
               With expertise in project management, planning, design and other professional
               services, we provide consistent communication and knowledgeable guidance.
               We have full-time tradespeople on staff, so we are less reliant on

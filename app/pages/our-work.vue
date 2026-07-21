@@ -7,11 +7,11 @@ import imgRotator5 from '~/assets/projects/residential/lake-retreat/exteriors/MA
 import imgRotator1 from '~/assets/projects/residential/mountain-craftsman/exterior/DEVL1774-7.jpg'
 
 const slides = [
-  { src: imgRotator1, alt: '' },
-  { src: imgRotator2, alt: '' },
-  { src: imgRotator3, alt: '' },
-  { src: imgRotator4, alt: '' },
-  { src: imgRotator5, alt: '' },
+  { src: imgRotator1, alt: 'Mountain Craftsman custom home built in Montana by Golden Eagle Construction' },
+  { src: imgRotator2, alt: 'Town Pump car wash commercial construction project in Montana' },
+  { src: imgRotator3, alt: 'Bill Roberts Golf Course clubhouse construction project in Helena, Montana' },
+  { src: imgRotator4, alt: 'Twin Creek Apartments multi-family construction project in Montana' },
+  { src: imgRotator5, alt: 'Lake Retreat custom home exterior in Montana' },
 ]
 
 const idx = ref(0)
@@ -43,7 +43,7 @@ onUnmounted(stop)
     <Meta property="og:url" content="https://geconstruction.com/our-work/" />
     <Meta property="og:image" content="https://geconstruction.com/images/og-image.jpg" />
   </Head>
-  <titleSection headline="Commercial & Residential Construction" />
+  <titleSection headline="Commercial & Residential Construction in Montana" />
 
   <section>
     <div class="container px-6 py-32 mx-auto">
@@ -61,6 +61,8 @@ onUnmounted(stop)
               region. Our residential projects include unique custom homes that realize our clients’
               visions and reflect their styles. On the commercial and industrial side, we handle new
               construction projects, remodels, and renovations.
+              Our work spans Helena, Bozeman, Big Sky and southwestern Montana, with commercial and
+              multi-family projects extending into Billings.
             </p>
 
             <!-- Column 2 -->

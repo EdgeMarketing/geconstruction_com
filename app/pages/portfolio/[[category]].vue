@@ -261,7 +261,7 @@ const scrollThumbs = (direction) => {
     <Meta property="og:image" content="https://geconstruction.com/images/og-image.jpg" />
   </Head>
 
-  <titleSection headline="Our Work" />
+  <titleSection headline="Our Construction Work in Montana" />
   <section class="py-24 bg-white">
     <div class="container px-6 mx-auto">
       <!-- Filter tabs (top-level categories) -->

@@ -9,7 +9,7 @@
     <Meta property="og:image" content="https://geconstruction.com/images/excavation.jpg" />
   </Head>
   <div style="background-image: url('/images/texture.png')" class="bg-fixed bg-cover">
-    <titleSection headline="Excavation Services" />
+    <titleSection headline="Excavation Services in Montana" />
 
     <section>
       <div class="container px-6 pt-32 pb-10 mx-auto">
@@ -18,7 +18,7 @@
             When digging, clearing or grading are needed
           </div>
           <div class="max-w-4xl mx-auto my-12 leading-7 tracking-wide text-brandSilver1">
-            If you need to remove soil, rock, and other materials from a site to prepare it for construction or other purposes, we offer comprehensive excavation services, which include:
+            If you need to prepare a residential or commercial site in Helena, Bozeman or the surrounding Montana communities we serve, we offer comprehensive excavation services, including:
           </div>
           <h4 class="mb-12 text-2xl font-bold leading-10 capitalize text-brandGold">
             <a href="tel:+14065807061" class="hover:text-brandGold/75">
