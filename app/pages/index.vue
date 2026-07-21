@@ -69,9 +69,12 @@ onUnmounted(stop)
       <div class="relative pt-48 pb-12 text-2xl font-light leading-relaxed text-white">
         <div class="grid grid-cols-1 gap-28 md:grid-cols-12">
           <div class="md:col-span-5">
-            <h1 class="text-3xl font-bold leading-[48px] pr-5 capitalize">
-              Your construction partner delivering high-quality residential and commercial projects
+            <h1 class="pr-5 text-3xl font-bold leading-[48px]">
+              Custom Home Builders in Montana
             </h1>
+            <p class="pr-5 mt-5 text-lg font-light leading-8 tracking-wide text-white/80">
+              Your trusted construction partner for high-quality residential and commercial projects throughout Montana.
+            </p>
           </div>
           <div class="md:col-span-7">
             <p class="text-lg leading-8 tracking-wide">
